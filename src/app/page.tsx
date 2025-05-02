@@ -16,7 +16,8 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Container for hero content - Adjusted padding and alignment */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-32 md:pt-40"> {/* Increased top padding */}
+        {/* Increased top padding to lower the content */}
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-48 md:pt-56">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -37,13 +38,13 @@ export default function Home() {
             We are a community united by faith, committed to knowing God and making Him known. Join us as we grow together in love and service, sharing the hope we have in Christ with Anytown and beyond.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-left bg-card border-border shadow-sm">
+             <Card className="text-left bg-card border-border shadow-sm">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm text-muted-foreground">
-                 "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
+                 "We aspire to be a beautiful, glorious, and excellent church, marked by a passionate love for God and wholehearted obedience to His will."
                 </CardDescription>
               </CardContent>
             </Card>
@@ -53,7 +54,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm text-muted-foreground">
-                 "We aspire to be a beautiful, glorious, and excellent church, marked by a passionate love for God and wholehearted obedience to His will."
+                 "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
                 </CardDescription>
               </CardContent>
             </Card>
