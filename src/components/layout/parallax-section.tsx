@@ -18,59 +18,63 @@ export default function ParallaxSection({
   minHeight = '100vh', // Default to full viewport height
   ...rest // Capture other props like data-ai-hint
 }: ParallaxSectionProps) {
+  const [isClient, setIsClient] = useState(false);
   const [offsetY, setOffsetY] = useState(0);
 
-    const handleScroll = () => {
-      // Calculate parallax offset based on scroll position and strength
-      // The division factor controls the speed of the parallax effect
-      setOffsetY(window.pageYOffset * 0.3);
-    };
-
   useEffect(() => {
-    // Check if window is defined (runs only on client-side)
+    setIsClient(true); // Set isClient to true only on the client side
+
     if (typeof window !== 'undefined') {
-        window.addEventListener('scroll', handleScroll);
+      const handleScroll = () => {
+        // Basic parallax effect: move background slower than scroll
+        setOffsetY(window.pageYOffset * 0.5); // Adjust multiplier for parallax speed
+      };
+
+      window.addEventListener('scroll', handleScroll, { passive: true });
+      // Initial call to set position
+      handleScroll();
+
       // Cleanup listener on component unmount
       return () => {
-        window.removeEventListener('scroll', handleScroll)
+        window.removeEventListener('scroll', handleScroll);
       };
     }
-  }, []);
+  }, []); // Empty dependency array ensures this runs once on mount
 
 
 return (
     <section
       className={`relative overflow-hidden ${className}`}
-      style={{ minHeight: "100dvh" }}
+      style={{ minHeight }} // Use minHeight prop dynamically
       {...rest} // Spread the rest of the props (including data-ai-hint)
     >
+      {/* Background Image Container */}
       <div
-        className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-no-repeat" // Make taller to allow for movement
+        className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          height: '150%', // Make taller to compensate for transform
-          width:'100%',
-          top:0,
-          left:0,
-          // Apply the parallax transformation
-          // Move the background up as the user scrolls down
-          transform: `translateY(${offsetY * 0.5}px)`,
-          // Add will-change for performance optimization
+          // Apply parallax transform only on the client after mount
+          transform: isClient ? `translateY(${offsetY}px)` : 'none',
+          // Ensure transform changes smoothly
+          transition: isClient ? 'transform 0.1s ease-out' : 'none',
+          // Optimize rendering performance
           willChange: 'transform',
-          zIndex: -1, // Ensure background is behind content
+          // Ensure background stays behind content
+          zIndex: -1,
+          // Make background taller to allow vertical movement without showing edges
+          // Adjust this value based on the desired parallax effect intensity
+          top: isClient ? `-${offsetY * 0.5}px` : '0px', // Compensate for the translateY
+          height: isClient ? `calc(100% + ${offsetY * 0.5}px)` : '100%', // Make taller based on offset
         }}
         aria-hidden="true"
-      >
-         {/* Optional Overlay - uncomment if needed
-         <div className="absolute inset-0 bg-black/60 z-10"></div> */}
-       </div>
+      />
 
+      {/* Optional Overlay - uncomment if needed
+       <div className="absolute inset-0 bg-black/50 z-0"></div> */}
 
-      <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center p-4">
-           {/* Render children directly */}
+      {/* Content Container */}
+      <div className="relative z-10 flex flex-col h-full w-full" style={{ minHeight }}>
+           {/* Render children, allowing parent to control alignment/justification via className */}
            {children}
       </div>
     </section>

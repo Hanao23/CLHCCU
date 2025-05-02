@@ -12,20 +12,23 @@ export default function Home() {
         backgroundImage="/images/hero-background.jpg" // Use the local image
         data-ai-hint="people worshiping hands raised silhouette"
         minHeight="100vh" // Ensure parallax covers full viewport height
-        className="flex items-center justify-center text-center text-white" // Center content, set text color
+        className="text-white" // Set text color for content inside
       >
-        {/* Container for hero content - Takes full height of parent to center vertically */}
-        <div className="relative z-20 flex flex-col justify-center items-center h-full w-full max-w-4xl px-4">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-lg">
-            CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 drop-shadow-lg">
-            Be pleasing to God. Be a blessing to others.
-          </p>
-          <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-black">
-            <Link href="/about">Learn More</Link>
-          </Button>
-        </div>
+        {/* Container for hero content - Center vertically and horizontally */}
+        <div className="relative z-10 flex flex-col justify-center items-center text-center h-full w-full max-w-4xl mx-auto px-4" style={{ minHeight: '100vh' }}>
+           {/* Add padding or adjust margins as needed */}
+           <div className="py-20"> {/* Added padding top and bottom */}
+             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-lg">
+               CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
+             </h1>
+             <p className="text-xl md:text-2xl mb-8 drop-shadow-lg">
+               Be pleasing to God. Be a blessing to others.
+             </p>
+             <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-black">
+               <Link href="/about">Learn More</Link>
+             </Button>
+           </div>
+         </div>
       </ParallaxSection>
 
       {/* Welcome and Description Section */}
@@ -47,7 +50,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/50 hover:backdrop-blur-sm hover:shadow-lg group">
+            <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/70 hover:backdrop-blur-sm hover:shadow-lg group">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Vision</CardTitle>
               </CardHeader>
@@ -89,6 +92,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
     </>
   );
 }
