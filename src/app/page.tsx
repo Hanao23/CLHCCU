@@ -16,7 +16,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Container for hero content - Centered vertically and horizontally */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-20"> {/* Added pt-20 for vertical centering adjustment */}
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-32 md:pt-40"> {/* Adjusted pt for lower positioning */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -38,28 +38,28 @@ export default function Home() {
           </p>
           {/* Adjusted grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-             <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/50 hover:backdrop-blur-md hover:shadow-lg">
+             <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/50 hover:backdrop-blur-sm hover:shadow-lg group">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-sm text-muted-foreground">
+                <CardDescription className="text-sm text-muted-foreground group-hover:text-card-foreground">
                   "We aspire to be a beautiful, glorious, and excellent church, marked by a passionate love for God and wholehearted obedience to His will."
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/50 hover:backdrop-blur-md hover:shadow-lg">
+            <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/50 hover:backdrop-blur-sm hover:shadow-lg group">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-sm text-muted-foreground">
+                <CardDescription className="text-sm text-muted-foreground group-hover:text-card-foreground">
                    "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
                 </CardDescription>
               </CardContent>
             </Card>
           </div>
-           {/* Removed Worship Service details from here as requested */}
+           {/* Removed Worship Service details card */}
         </div>
       </section>
 
