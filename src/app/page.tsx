@@ -15,9 +15,8 @@ export default function Home() {
         className="flex items-center justify-center text-center" // Center content vertically and horizontally
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Container for hero content - Adjusted padding and alignment */}
-        {/* Increased top padding to lower the content */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-48 md:pt-56 lg:pt-64"> {/* Further increased top padding */}
+        {/* Container for hero content - Centered vertically and horizontally */}
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -35,7 +34,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground">Welcome to CLHCCU</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
-            We are a community united by faith, committed to knowing God and making Him known. Join us as we grow together in love and service, sharing the hope we have in Christ with Anytown and beyond.
+             We are a community united by faith, committed to knowing God and making Him known. Join us as we grow together in love and service, sharing the hope we have in Christ.
           </p>
           {/* Adjusted grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -55,11 +54,12 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm text-muted-foreground">
-                  "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
+                   "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
                 </CardDescription>
               </CardContent>
             </Card>
           </div>
+
         </div>
       </section>
 
@@ -68,7 +68,7 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="md:w-1/2">
             <Image
-              src="https://picsum.photos/600/400?grayscale"
+              src="https://picsum.photos/600/400?grayscale&random=11" // Changed random seed for variety
               alt="Community Picnic"
               width={600}
               height={400}
