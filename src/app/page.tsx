@@ -16,7 +16,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Container for hero content - Centered vertically and horizontally */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-32 md:pt-40"> {/* Adjusted pt for lower positioning */}
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-40 md:pt-56"> {/* Increased pt to lower content */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -59,7 +59,7 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-           {/* Removed Worship Service details card */}
+
         </div>
       </section>
 
