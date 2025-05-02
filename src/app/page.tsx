@@ -9,11 +9,12 @@ export default function Home() {
     <>
       {/* Hero Section with Parallax */}
       <ParallaxSection
-        backgroundImage="/images/hero-background.jpg" // Placeholder, replace with actual image path
-        data-ai-hint="church building cross"
+        backgroundImage="https://picsum.photos/1920/1080?grayscale" // Placeholder, replace with actual image path
+        data-ai-hint="church building cross silhouette"
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        <div className="relative z-20 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center text-white">
+        {/* Removed container mx-auto to allow full-width centering */}
+        <div className="relative z-20 px-4 h-full flex flex-col justify-center items-center text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -73,12 +74,12 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="md:w-1/2">
             <Image
-              src="https://picsum.photos/600/400"
+              src="https://picsum.photos/600/400?grayscale"
               alt="Community Picnic"
               width={600}
               height={400}
               className="rounded-lg shadow-md object-cover w-full"
-              data-ai-hint="community event people"
+              data-ai-hint="community event people food"
             />
           </div>
           <div className="md:w-1/2 text-center md:text-left">
