@@ -15,7 +15,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Removed container mx-auto to allow full-width centering */}
         <div className="relative z-20 px-4 h-full flex flex-col justify-center items-center text-center text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
           <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
