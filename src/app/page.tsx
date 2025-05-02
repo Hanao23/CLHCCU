@@ -9,18 +9,17 @@ export default function Home() {
     <>
       {/* Hero Section with Parallax */}
       <ParallaxSection
-        backgroundImage="https://picsum.photos/1920/1080?grayscale&random=1" // Placeholder, updated random seed
+        backgroundImage="/images/hero-background.jpg" // Use the local image
         data-ai-hint="people worshiping hands raised silhouette"
         minHeight="100vh" // Ensure parallax covers full viewport height
-        className="flex items-center justify-center text-center" // Center content vertically and horizontally
+        className="flex items-center justify-center text-center text-white" // Center content, set text color
       >
-        <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Container for hero content - Adjusted pt */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-64 md:pt-72"> {/* Further increased pt to lower content */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
+        {/* Container for hero content - Takes full height of parent to center vertically */}
+        <div className="relative z-20 flex flex-col justify-center items-center h-full w-full max-w-4xl px-4">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-lg">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
-          <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
+          <p className="text-xl md:text-2xl mb-8 drop-shadow-lg">
             Be pleasing to God. Be a blessing to others.
           </p>
           <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-black">
