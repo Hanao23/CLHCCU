@@ -12,18 +12,18 @@ export default function Home() {
         backgroundImage="https://picsum.photos/1920/1080?grayscale" // Placeholder, replace with actual image path
         data-ai-hint="church building cross silhouette"
         minHeight="100vh" // Ensure parallax covers full viewport height
-        className="flex items-center justify-center" // Center content vertically and horizontally
+        className="flex items-center justify-center text-center" // Center content vertically and horizontally
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Container for hero content */}
-        <div className="relative z-20 px-4 text-center text-white">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
+        {/* Container for hero content - Adjusted padding and alignment */}
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center h-full">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
           <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
             Be pleasing to God. Be a blessing to others.
           </p>
-          <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-black">
+          <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-black self-center">
             <Link href="/about">Learn More</Link>
           </Button>
         </div>
@@ -43,7 +43,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground">
-                 We are a Trinitarian Church fully believing in the Bible of 66 Books as God-breathed. We wholeheartedly embrace the Five Solas namely Sola Scriptura, Sola Fide, Sola Gratia, Solus Christus, and Soli Deo Gloria. We believe in the importance and role of the church for all the great plans of God here on earth. We believe in hell and heaven. We believe in demons and angels. We believe in the Second Coming of Christ and the Millennial Kingdom.
+                  "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
                 </CardDescription>
               </CardContent>
             </Card>
