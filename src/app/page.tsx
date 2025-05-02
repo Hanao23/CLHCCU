@@ -12,11 +12,11 @@ export default function Home() {
         backgroundImage="https://picsum.photos/1920/1080?grayscale" // Placeholder, replace with actual image path
         data-ai-hint="church building cross silhouette"
         minHeight="100vh" // Ensure parallax covers full viewport height
+        className="flex items-center justify-center" // Center content vertically and horizontally
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Container for hero content, uses flex to center horizontally, adjusted vertical padding */}
-        {/* Increased pt to push content lower */}
-        <div className="relative z-20 px-4 h-full flex flex-col items-center text-center text-white pt-64">
+        {/* Container for hero content */}
+        <div className="relative z-20 px-4 text-center text-white">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -39,17 +39,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-left bg-card border-border shadow-sm">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-card-foreground">Our Mission</CardTitle>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Statement of faith</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground">
-                  To lead people into a growing relationship with Jesus Christ through worship, community, and outreach.
+                 We are a Trinitarian Church fully believing in the Bible of 66 Books as God-breathed. We wholeheartedly embrace the Five Solas namely Sola Scriptura, Sola Fide, Sola Gratia, Solus Christus, and Soli Deo Gloria. We believe in the importance and role of the church for all the great plans of God here on earth. We believe in hell and heaven. We believe in demons and angels. We believe in the Second Coming of Christ and the Millennial Kingdom.
                 </CardDescription>
               </CardContent>
             </Card>
             <Card className="text-left bg-card border-border shadow-sm">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-card-foreground">Community Focus</CardTitle>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-muted-foreground">
