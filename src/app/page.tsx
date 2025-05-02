@@ -70,8 +70,8 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="md:w-1/2">
             <Image
-              src="https://picsum.photos/600/400?grayscale&random=11" // Changed random seed for variety
-              alt="Community Picnic"
+              src="/images/event-image.jpg"
+              alt="Events"
               width={600}
               height={400}
               className="rounded-lg shadow-md object-cover w-full"

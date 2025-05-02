@@ -4,7 +4,7 @@ import type { ReactNode } from 'react';
 import { useState, useEffect } from 'react';
 
 interface ParallaxSectionProps {
-  backgroundImage: string;
+  backgroundImage?: string;
   children: ReactNode;
   className?: string;
   minHeight?: string;
@@ -12,7 +12,7 @@ interface ParallaxSectionProps {
 }
 
 export default function ParallaxSection({
-  backgroundImage,
+  backgroundImage = "/images/event-image.jpg",
   children,
   className = '',
   minHeight = '100vh', // Default to full viewport height

@@ -20,13 +20,13 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Contact Us</h3>
             <p className="mb-1">
-              <a href="tel:+639123456789" className="hover:text-white transition-colors">
-                +63 (912) 345-6789
+              <a href="tel:09263629126" className="hover:text-white transition-colors">
+                 0926 362 9126
               </a>
             </p>
             <p>
-              <a href="mailto:info@clhccu.org" className="hover:text-white transition-colors">
-                info@clhccu.org
+              <a href="mailto:clhccu@gmail.com" className="hover:text-white transition-colors">
+                clhccu@gmail.com
               </a>
             </p>
           </div>
@@ -34,8 +34,8 @@ export function Footer() {
           {/* Location */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Our Location</h3>
-            <p>123 Main Street</p>
-            <p>Anytown, Philippines 1001</p>
+            <p>2MWF+2G8,</p>
+            <p>San Fernando, Pampanga, Philippines</p>
           </div>
 
           {/* Social Media & Copyright */}
