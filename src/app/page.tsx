@@ -17,7 +17,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Container for hero content - Adjusted padding and alignment */}
         {/* Increased top padding to lower the content */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-48 md:pt-56">
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-48 md:pt-56 lg:pt-64"> {/* Further increased top padding */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -37,7 +37,8 @@ export default function Home() {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
             We are a community united by faith, committed to knowing God and making Him known. Join us as we grow together in love and service, sharing the hope we have in Christ with Anytown and beyond.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Adjusted grid layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
              <Card className="text-left bg-card border-border shadow-sm">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Mission</CardTitle>
@@ -58,17 +59,15 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
             </Card>
-             <Card className="text-left bg-card border-border shadow-sm">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-card-foreground">Worship Services</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  Join us every Sunday at 10:00 AM for inspiring worship and relevant teaching from the Bible.
-                </CardDescription>
-              </CardContent>
-            </Card>
+            {/* Removed Worship Services Card */}
           </div>
+           {/* Explicitly add Worship Service Info below the grid */}
+           <div className="mt-16 bg-card border-border shadow-sm rounded-lg p-6 max-w-2xl mx-auto">
+             <h3 className="text-2xl font-semibold text-card-foreground mb-3 text-center">Worship Services</h3>
+             <p className="text-muted-foreground text-center">
+               Join us every Sunday at 10:00 AM for inspiring worship and relevant teaching from the Bible.
+             </p>
+           </div>
         </div>
       </section>
 
