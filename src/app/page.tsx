@@ -16,14 +16,14 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Container for hero content - Adjusted padding and alignment */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center h-full">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md">
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-20 md:pt-0"> {/* Added items-center and adjusted padding */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
           <p className="text-xl md:text-2xl mb-8 drop-shadow-md">
             Be pleasing to God. Be a blessing to others.
           </p>
-          <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-black self-center">
+          <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-black">
             <Link href="/about">Learn More</Link>
           </Button>
         </div>
@@ -39,20 +39,20 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-left bg-card border-border shadow-sm">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-card-foreground">Statement of faith</CardTitle>
+                <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Mission</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground">
-                  "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
+                <CardDescription className="text-sm text-muted-foreground">
+                 "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
                 </CardDescription>
               </CardContent>
             </Card>
             <Card className="text-left bg-card border-border shadow-sm">
               <CardHeader>
-                <CardTitle className="text-xl font-semibold text-card-foreground">Our Vision</CardTitle>
+                <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Vision</CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-muted-foreground">
+                <CardDescription className="text-sm text-muted-foreground">
                   Building strong relationships within our church family and serving the local community with compassion.
                 </CardDescription>
               </CardContent>
