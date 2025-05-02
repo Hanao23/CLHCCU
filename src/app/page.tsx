@@ -45,7 +45,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm text-muted-foreground">
-                 "We aspire to be a beautiful, glorious, and excellent church, marked by a passionate love for God and wholehearted obedience to His will."
+                  "We aspire to be a beautiful, glorious, and excellent church, marked by a passionate love for God and wholehearted obedience to His will."
                 </CardDescription>
               </CardContent>
             </Card>
@@ -55,19 +55,11 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-sm text-muted-foreground">
-                 "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
+                  "Driven by Jesus' call: To seek and save the lost, and to nurture disciples."
                 </CardDescription>
               </CardContent>
             </Card>
-            {/* Removed Worship Services Card */}
           </div>
-           {/* Explicitly add Worship Service Info below the grid */}
-           <div className="mt-16 bg-card border-border shadow-sm rounded-lg p-6 max-w-2xl mx-auto">
-             <h3 className="text-2xl font-semibold text-card-foreground mb-3 text-center">Worship Services</h3>
-             <p className="text-muted-foreground text-center">
-               Join us every Sunday at 10:00 AM for inspiring worship and relevant teaching from the Bible.
-             </p>
-           </div>
         </div>
       </section>
 
