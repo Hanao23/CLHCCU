@@ -11,10 +11,12 @@ export default function Home() {
       <ParallaxSection
         backgroundImage="https://picsum.photos/1920/1080?grayscale" // Placeholder, replace with actual image path
         data-ai-hint="church building cross silhouette"
+        minHeight="100vh" // Ensure parallax covers full viewport height
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Removed container mx-auto to allow full-width centering */}
-        <div className="relative z-20 px-4 h-full flex flex-col justify-center items-center text-center text-white">
+        {/* Container for hero content, uses flex to center vertically and horizontally */}
+        {/* Added pt-16 to push content down below the fixed header */}
+        <div className="relative z-20 px-4 h-full flex flex-col justify-center items-center text-center text-white pt-16">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
