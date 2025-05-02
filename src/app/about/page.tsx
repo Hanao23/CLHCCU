@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'; // Import Card components
 
 export default function AboutPage() {
   return (
@@ -30,42 +31,60 @@ export default function AboutPage() {
       <div className="mb-16">
         <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">Our Beliefs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
-            <h3 className="text-xl font-semibold mb-2 text-card-foreground">The Bible</h3>
-            <p className="text-muted-foreground">
-              We believe the Bible is the inspired, infallible Word of God, the ultimate authority for faith and life.
-            </p>
-          </div>
-          <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
-            <h3 className="text-xl font-semibold mb-2 text-card-foreground">God</h3>
-            <p className="text-muted-foreground">
-              We believe in one God, eternally existing in three persons: Father, Son (Jesus Christ), and Holy Spirit.
-            </p>
-          </div>
-          <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
-            <h3 className="text-xl font-semibold mb-2 text-card-foreground">Salvation</h3>
-            <p className="text-muted-foreground">
-              We believe salvation is a free gift received through faith in Jesus Christ, who died for our sins and rose again.
-            </p>
-          </div>
-           <div className="bg-card p-6 rounded-lg border border-border shadow-sm">
-            <h3 className="text-xl font-semibold mb-2 text-card-foreground">The Church</h3>
-            <p className="text-muted-foreground">
-             We believe the Church is the body of Christ, called to worship God, nurture believers, and share the Gospel.
-            </p>
-          </div>
+          <Card className="bg-card p-6 rounded-lg border border-border shadow-sm">
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold mb-2 text-card-foreground">The Bible</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                We believe the Bible is the inspired, infallible Word of God, the ultimate authority for faith and life.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="bg-card p-6 rounded-lg border border-border shadow-sm">
+            <CardHeader>
+               <CardTitle className="text-xl font-semibold mb-2 text-card-foreground">God</CardTitle>
+            </CardHeader>
+             <CardContent>
+                <p className="text-muted-foreground">
+                We believe in one God, eternally existing in three persons: Father, Son (Jesus Christ), and Holy Spirit.
+              </p>
+            </CardContent>
+          </Card>
+          <Card className="bg-card p-6 rounded-lg border border-border shadow-sm">
+             <CardHeader>
+               <CardTitle className="text-xl font-semibold mb-2 text-card-foreground">Salvation</CardTitle>
+            </CardHeader>
+             <CardContent>
+               <p className="text-muted-foreground">
+                We believe salvation is a free gift received through faith in Jesus Christ, who died for our sins and rose again.
+              </p>
+             </CardContent>
+          </Card>
+           <Card className="bg-card p-6 rounded-lg border border-border shadow-sm">
+            <CardHeader>
+               <CardTitle className="text-xl font-semibold mb-2 text-card-foreground">The Church</CardTitle>
+            </CardHeader>
+             <CardContent>
+               <p className="text-muted-foreground">
+                We believe the Church is the body of Christ, called to worship God, nurture believers, and share the Gospel.
+               </p>
+             </CardContent>
+          </Card>
         </div>
       </div>
 
-       <div>
-        <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">Meet Our Leadership</h2>
-        {/* Placeholder for leadership team - can be expanded */}
-        <div className="text-center">
+       {/* Wrap the leadership section in a Card */}
+       <Card className="text-center bg-card border border-border shadow-sm p-8 rounded-lg">
+        <CardHeader>
+            <CardTitle className="text-3xl font-semibold text-center text-card-foreground">Meet Our Leadership</CardTitle>
+        </CardHeader>
+        <CardContent>
            <p className="text-lg text-muted-foreground">
             Our leadership team information is coming soon. We are blessed with dedicated individuals guiding our church community.
           </p>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
 
     </div>
   );

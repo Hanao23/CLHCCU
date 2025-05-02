@@ -40,14 +40,14 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-3">Connect With Us</h3>
             <div className="flex justify-center md:justify-start space-x-4 mb-4 items-center"> {/* Added items-center */}
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/clhccu" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-6 w-6" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/clhccu_official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-gray-400 hover:text-white transition-colors">
                 <Instagram className="h-6 w-6" />
               </a>
               {/* Replaced text T with TikTok SVG Icon */}
-              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.tiktok.com/@clhccu?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-gray-400 hover:text-white transition-colors">
                  <TikTokIcon />
               </a>
             </div>
