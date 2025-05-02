@@ -16,7 +16,7 @@ export default function Home() {
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         {/* Container for hero content - Centered vertically and horizontally */}
-        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full">
+        <div className="relative z-20 px-4 text-white flex flex-col justify-center items-center h-full pt-20"> {/* Added pt-20 for vertical centering adjustment */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
@@ -38,7 +38,7 @@ export default function Home() {
           </p>
           {/* Adjusted grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-             <Card className="text-left bg-card border-border shadow-sm">
+             <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/70 hover:backdrop-blur-sm hover:shadow-lg">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Mission</CardTitle>
               </CardHeader>
@@ -48,7 +48,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="text-left bg-card border-border shadow-sm">
+            <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/70 hover:backdrop-blur-sm hover:shadow-lg">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Vision</CardTitle>
               </CardHeader>
@@ -59,7 +59,7 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-
+           {/* Removed Worship Service details from here as requested */}
         </div>
       </section>
 
