@@ -14,9 +14,9 @@ export default function Home() {
         minHeight="100vh" // Ensure parallax covers full viewport height
       >
         <div className="absolute inset-0 bg-black/60 z-10"></div>
-        {/* Container for hero content, uses flex to center vertically and horizontally */}
-        {/* Added pt-16 to push content down below the fixed header */}
-        <div className="relative z-20 px-4 h-full flex flex-col justify-center items-center text-center text-white pt-16">
+        {/* Container for hero content, uses flex to center horizontally, adjusted vertical padding */}
+        {/* Increased pt to push content lower */}
+        <div className="relative z-20 px-4 h-full flex flex-col items-center text-center text-white pt-64">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 drop-shadow-md text-center">
             CHRIST THE LIVING HOPE COMMUNITY CHURCH UNITED
           </h1>
