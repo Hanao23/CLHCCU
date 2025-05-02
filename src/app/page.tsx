@@ -38,7 +38,7 @@ export default function Home() {
           </p>
           {/* Adjusted grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-             <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/70 hover:backdrop-blur-sm hover:shadow-lg">
+             <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/50 hover:backdrop-blur-md hover:shadow-lg">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Mission</CardTitle>
               </CardHeader>
@@ -48,7 +48,7 @@ export default function Home() {
                 </CardDescription>
               </CardContent>
             </Card>
-            <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/70 hover:backdrop-blur-sm hover:shadow-lg">
+            <Card className="text-left bg-card border-border shadow-sm transition-all duration-300 hover:bg-card/50 hover:backdrop-blur-md hover:shadow-lg">
               <CardHeader>
                 <CardTitle className="tracking-tight text-xl font-semibold text-card-foreground">Our Vision</CardTitle>
               </CardHeader>
