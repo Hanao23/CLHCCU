@@ -1,12 +1,12 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
-
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, X } from 'lucide-react'; // Using Menu for mobile trigger
+import { Menu, X, Facebook, Instagram } from 'lucide-react'; // Added Facebook, Instagram
+
 // Inline SVG for TikTok Icon
 const TikTokIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -23,16 +23,18 @@ const navLinks = [
 ];
 
 export function Header() {
-
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false); // State to track client-side mount
 
   useEffect(() => {
+    setIsMounted(true); // Set mounted state on client
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     // Initial check in case page loads scrolled
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
@@ -43,17 +45,54 @@ export function Header() {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  // Determine styles based on mounted state to avoid hydration mismatch
+  const useScrolledStyles = isMounted && (isScrolled || pathname !== '/');
+  const headerBgClass = useScrolledStyles ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent';
+  const headerBorderClass = useScrolledStyles ? 'border-border' : 'border-transparent';
+  const textClass = useScrolledStyles ? 'text-foreground' : 'text-white drop-shadow-md';
+  const hoverTextClass = useScrolledStyles ? 'hover:text-primary' : 'hover:text-gray-200 drop-shadow-sm';
+  const donateButtonVariant = useScrolledStyles ? 'secondary' : 'outline';
+  const donateButtonClass = useScrolledStyles
+    ? 'bg-gray-700 hover:bg-gray-600 text-white'
+    : 'border-white text-white bg-transparent hover:bg-white hover:text-black';
+  const mobileTriggerClass = useScrolledStyles ? 'text-foreground' : 'text-white hover:bg-white/10';
+
+
+  // Render null or a placeholder during server render and initial client render before mount
+   if (!isMounted) {
+     // Render a static version or null to avoid mismatch
+     // A simple static header matching the 'scrolled' state is often safest
+     return (
+        <header
+          className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 shadow-md backdrop-blur-sm border-b border-border`}
+        >
+         <div className="container mx-auto px-4 h-16 flex justify-between items-center">
+            <Link href="/" className={`text-xl transition-colors duration-300 font-normal text-foreground`}>
+             CLHCCU
+           </Link>
+            {/* Placeholder for nav to maintain layout */}
+            <div className="hidden md:flex items-center space-x-6 h-10"> {/* Adjust height to match button */}
+                 <div className="w-12 h-6 bg-muted rounded"></div>
+                 <div className="w-12 h-6 bg-muted rounded"></div>
+                 <div className="w-12 h-6 bg-muted rounded"></div>
+                 <div className="w-14 h-6 bg-muted rounded"></div>
+                 <div className="w-16 h-10 bg-muted rounded-md"></div> {/* Placeholder for Donate button */}
+            </div>
+             <div className="md:hidden h-10 w-10 bg-muted rounded-md"></div> {/* Placeholder for mobile trigger */}
+          </div>
+       </header>
+     );
+   }
+
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || pathname !== '/' ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent'
-      } border-b border-transparent ${isScrolled || pathname !== '/' ? 'border-border' : ''}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBgClass} border-b ${headerBorderClass}`}
     >
       <div className="container mx-auto px-4 h-16 flex justify-between items-center">
         <Link
           href="/"
-          className={`text-xl transition-colors duration-300 ${pathname === '/' ? 'font-bold' : 'font-normal'} ${isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white drop-shadow-md'}`}>
+          className={`text-xl transition-colors duration-300 ${pathname === '/' ? 'font-bold' : 'font-normal'} ${textClass}`}>
           CLHCCU
         </Link>
 
@@ -63,12 +102,12 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white hover:text-gray-200 drop-shadow-sm'}`}
+              className={`text-sm font-medium transition-colors ${hoverTextClass} ${textClass}`}
             >
               {link.label}
             </Link>
           ))}
-          <Button asChild variant={isScrolled || pathname !== '/' ? 'secondary' : 'outline'} className={`${isScrolled || pathname !== '/' ? 'bg-gray-700 hover:bg-gray-600 text-white' : 'border-white text-white bg-transparent hover:bg-white hover:text-black'}`}>
+          <Button asChild variant={donateButtonVariant} className={donateButtonClass}>
             <Link href="/donate">Donate</Link>
           </Button>
         </nav>
@@ -76,7 +115,7 @@ export function Header() {
         {/* Mobile Navigation Trigger */}
         <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className={`${isScrolled || pathname !== '/' ? 'text-foreground' : 'text-white hover:bg-white/10'} `}>
+            <Button variant="ghost" size="icon" className={mobileTriggerClass}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Open menu</span>
             </Button>
