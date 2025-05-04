@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, X, Facebook, Instagram } from 'lucide-react'; // Added Facebook, Instagram
+import { Menu, X } from 'lucide-react';
 
 // Inline SVG for TikTok Icon
 const TikTokIcon = () => (
@@ -26,72 +26,72 @@ export function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false); // State to track client-side mount
+  const [isClient, setIsClient] = useState(false); // State to track client-side execution
+
+   // Determine initial styles based *only* on pathname (consistent server/client)
+   const isOnHomepage = pathname === '/';
+   const initialHeaderBgClass = isOnHomepage ? 'bg-transparent' : 'bg-background/95 shadow-md backdrop-blur-sm';
+   const initialHeaderBorderClass = isOnHomepage ? 'border-transparent' : 'border-border';
+   const initialTextClass = isOnHomepage ? 'text-white drop-shadow-md' : 'text-foreground';
+   const initialHoverTextClass = isOnHomepage ? 'hover:text-gray-200 drop-shadow-sm' : 'hover:text-primary';
+   const initialDonateButtonVariant = isOnHomepage ? 'outline' : 'secondary';
+   const initialDonateButtonClass = isOnHomepage
+     ? 'border-white text-white bg-transparent hover:bg-white hover:text-black'
+     : 'bg-gray-700 hover:bg-gray-600 text-white';
+   const initialMobileTriggerClass = isOnHomepage ? 'text-white hover:bg-white/10' : 'text-foreground';
+
+  // State to hold the dynamic classes, initialized with pathname-based values
+  const [headerBgClass, setHeaderBgClass] = useState(initialHeaderBgClass);
+  const [headerBorderClass, setHeaderBorderClass] = useState(initialHeaderBorderClass);
+  const [textClass, setTextClass] = useState(initialTextClass);
+  const [hoverTextClass, setHoverTextClass] = useState(initialHoverTextClass);
+  const [donateButtonVariant, setDonateButtonVariant] = useState(initialDonateButtonVariant as 'secondary' | 'outline');
+  const [donateButtonClass, setDonateButtonClass] = useState(initialDonateButtonClass);
+  const [mobileTriggerClass, setMobileTriggerClass] = useState(initialMobileTriggerClass);
+
 
   useEffect(() => {
-    setIsMounted(true); // Set mounted state on client
+    setIsClient(true); // Indicate client-side execution
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollState = window.scrollY > 10;
+      setIsScrolled(currentScrollState);
+
+      // Update styles based on scroll and pathname *only on the client*
+      const useScrolledStyles = currentScrollState || pathname !== '/';
+      setHeaderBgClass(useScrolledStyles ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent');
+      setHeaderBorderClass(useScrolledStyles ? 'border-border' : 'border-transparent');
+      setTextClass(useScrolledStyles ? 'text-foreground' : 'text-white drop-shadow-md');
+      setHoverTextClass(useScrolledStyles ? 'hover:text-primary' : 'hover:text-gray-200 drop-shadow-sm');
+      setDonateButtonVariant(useScrolledStyles ? 'secondary' : 'outline');
+      setDonateButtonClass(useScrolledStyles
+        ? 'bg-gray-700 hover:bg-gray-600 text-white'
+        : 'border-white text-white bg-transparent hover:bg-white hover:text-black');
+      setMobileTriggerClass(useScrolledStyles ? 'text-foreground' : 'text-white hover:bg-white/10');
     };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    // Initial check in case page loads scrolled
+
+    // Set initial scroll state on mount
     handleScroll();
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [pathname]); // Re-run effect if pathname changes
 
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
-  // Determine styles based on mounted state to avoid hydration mismatch
-  const useScrolledStyles = isMounted && (isScrolled || pathname !== '/');
-  const headerBgClass = useScrolledStyles ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent';
-  const headerBorderClass = useScrolledStyles ? 'border-border' : 'border-transparent';
-  const textClass = useScrolledStyles ? 'text-foreground' : 'text-white drop-shadow-md';
-  const hoverTextClass = useScrolledStyles ? 'hover:text-primary' : 'hover:text-gray-200 drop-shadow-sm';
-  const donateButtonVariant = useScrolledStyles ? 'secondary' : 'outline';
-  const donateButtonClass = useScrolledStyles
-    ? 'bg-gray-700 hover:bg-gray-600 text-white'
-    : 'border-white text-white bg-transparent hover:bg-white hover:text-black';
-  const mobileTriggerClass = useScrolledStyles ? 'text-foreground' : 'text-white hover:bg-white/10';
-
-
-  // Render null or a placeholder during server render and initial client render before mount
-   if (!isMounted) {
-     // Render a static version or null to avoid mismatch
-     // A simple static header matching the 'scrolled' state is often safest
-     return (
-        <header
-          className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background/95 shadow-md backdrop-blur-sm border-b border-border`}
-        >
-         <div className="container mx-auto px-4 h-16 flex justify-between items-center">
-            <Link href="/" className={`text-xl transition-colors duration-300 font-normal text-foreground`}>
-             CLHCCU
-           </Link>
-            {/* Placeholder for nav to maintain layout */}
-            <div className="hidden md:flex items-center space-x-6 h-10"> {/* Adjust height to match button */}
-                 <div className="w-12 h-6 bg-muted rounded"></div>
-                 <div className="w-12 h-6 bg-muted rounded"></div>
-                 <div className="w-12 h-6 bg-muted rounded"></div>
-                 <div className="w-14 h-6 bg-muted rounded"></div>
-                 <div className="w-16 h-10 bg-muted rounded-md"></div> {/* Placeholder for Donate button */}
-            </div>
-             <div className="md:hidden h-10 w-10 bg-muted rounded-md"></div> {/* Placeholder for mobile trigger */}
-          </div>
-       </header>
-     );
-   }
-
 
   return (
     <header
+      // Apply the dynamic classes from state
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBgClass} border-b ${headerBorderClass}`}
     >
       <div className="container mx-auto px-4 h-16 flex justify-between items-center">
         <Link
           href="/"
+          // Apply dynamic text class
           className={`text-xl transition-colors duration-300 ${pathname === '/' ? 'font-bold' : 'font-normal'} ${textClass}`}>
           CLHCCU
         </Link>
@@ -102,11 +102,13 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
+              // Apply dynamic text and hover classes
               className={`text-sm font-medium transition-colors ${hoverTextClass} ${textClass}`}
             >
               {link.label}
             </Link>
           ))}
+          {/* Apply dynamic button variant and class */}
           <Button asChild variant={donateButtonVariant} className={donateButtonClass}>
             <Link href="/donate">Donate</Link>
           </Button>
@@ -115,6 +117,7 @@ export function Header() {
         {/* Mobile Navigation Trigger */}
         <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
+            {/* Apply dynamic trigger class */}
             <Button variant="ghost" size="icon" className={mobileTriggerClass}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Open menu</span>
@@ -143,6 +146,7 @@ export function Header() {
                   {link.label}
                 </Link>
               ))}
+              {/* Mobile donate button uses a consistent style */}
               <Button asChild variant="secondary" size="lg" className="w-full bg-gray-700 hover:bg-gray-600 text-white" onClick={() => setMobileMenuOpen(false)}>
                 <Link href="/donate">Donate</Link>
               </Button>
