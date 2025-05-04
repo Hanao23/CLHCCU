@@ -1,5 +1,7 @@
 'use client';
 
+import { usePathname } from 'next/navigation';
+
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
@@ -14,6 +16,8 @@ const navLinks = [
 ];
 
 export function Header() {
+
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -34,7 +38,9 @@ export function Header() {
       } border-b border-transparent ${isScrolled ? 'border-border' : ''}`}
     >
       <div className="container mx-auto px-4 h-16 flex justify-between items-center">
-        <Link href="/" className={`text-xl font-bold ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-md'}`}>
+        <Link
+          href="/"
+          className={`text-xl  ${pathname === '/' ? 'font-bold' : 'font-normal'} ${isScrolled ? 'text-foreground' : 'text-white drop-shadow-md'}`}>
           CLHCCU
         </Link>
 
@@ -64,8 +70,10 @@ export function Header() {
           </SheetTrigger>
           <SheetContent side="right" className="w-[280px] bg-background p-0">
              <div className="flex justify-between items-center p-4 border-b">
-                <Link href="/" className="text-xl font-bold text-foreground" onClick={() => setMobileMenuOpen(false)}>
-                    CLHCCU
+               <Link
+                  href="/" 
+                  className={`text-xl ${pathname === '/' ? 'font-bold' : 'font-normal'} text-foreground`} onClick={() => setMobileMenuOpen(false)}>
+                  CLHCCU
                 </Link>
                  <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
                     <X className="h-6 w-6" />
