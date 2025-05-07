@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { HeartHandshake, BookOpen, Target, Gem, Church, Users, Award, TrendingUp, Smile } from 'lucide-react';
@@ -126,24 +127,25 @@ export default function AboutPage(): JSX.Element {
             </CardContent>
           </Card>
 
-          {/* Leadership Card 2 */}
-          <Card className="bg-card p-6 rounded-lg border border-border shadow-sm">
+          {/* Leadership Card 2 - Ruth Ocampo */}
+          <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm"> {/* Added text-center */}
              <Image
                 src="/images/pastorwife.jpg" // Replace with actual photo
                alt="Ruth Ocampo"
-                width={120}
-               height={120}
-                className="rounded-full mx-auto mb-4 shadow-md"
-                data-ai-hint="headshot portrait leader"
+                width={150}
+               height={150}
+                className="rounded-full mx-auto mb-4 shadow-md" // Ensured mx-auto and removed float
              />
-             <CardHeader className="p-0 text-center"> {/* Added text-center here to center title and description if desired, or remove for full left align */}
-               <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ruth Ocampo</CardTitle>
-               <CardDescription className="text-md text-primary">Pastor Wife</CardDescription>
-             </CardHeader>
-             <CardContent className="pt-4">
-               <p className="text-sm text-muted-foreground">
-               BS Economics UP DilimanMasters in Business Management UP San FernandoInternational Marketing in EEC by CDG GermanyJohn Maxwell Leadership Training               </p>
-             </CardContent>
+             <div> {/* Removed md:overflow-hidden */}
+                <CardHeader className="p-0"> {/* Removed text-left, will inherit from Card */}
+                  <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ruth Ocampo</CardTitle>
+                  <CardDescription className="text-md text-primary">Pastor Wife</CardDescription>
+                </CardHeader>
+                <CardContent className="pt-4"> {/* Removed text-left, will inherit from Card */}
+                  <p className="text-sm text-muted-foreground">
+                  BS Economics UP DilimanMasters in Business Management UP San FernandoInternational Marketing in EEC by CDG GermanyJohn Maxwell Leadership Training                  </p>
+                </CardContent>
+             </div>
           </Card>
          </div>
        </section>
@@ -198,15 +200,17 @@ export default function AboutPage(): JSX.Element {
        {/* Final Image/Call to Action (Optional) */}
        <Card className="mt-16 text-center bg-card border border-border shadow-sm p-8 rounded-lg">
          <CardContent>
-           <Image 
-            src="/images/ladder.jpg" 
-            alt="church event" 
-            width={600} 
-            height={400} 
-            className="rounded-lg shadow-md object-cover w-full" 
+           <Image
+            src="/images/ladder.jpg"
+            alt="church event"
+            width={600}
+            height={400}
+            className="rounded-lg shadow-md object-cover w-full"
             data-ai-hint="church event diverse people"/>
          </CardContent>
       </Card>
-    </div> 
+    </div>
   );
 }
+
+    
