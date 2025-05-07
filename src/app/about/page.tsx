@@ -1,19 +1,19 @@
 import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Users, HeartHandshake, BookOpen, Target, Gem } from 'lucide-react'; // Added icons
+import { HeartHandshake, BookOpen, Target, Gem, Church, Users, Award, TrendingUp, Smile } from 'lucide-react';
 
-export default function AboutPage() {
+export default function AboutPage(): JSX.Element {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
       {/* Hero Image Section */}
       <div className="mb-16 relative h-[40vh] md:h-[50vh] rounded-lg overflow-hidden shadow-lg">
         <Image
           src="/images/statementoffaith.jpg" // Replace with a relevant hero image if available
+          fill
+          style={{ objectFit: 'cover', objectPosition: 'center' }}
           alt="Statement Of Faith Banner"
-          layout="fill"
-          objectFit="cover"
           priority
-          className="filter " // Optional: brightness adjustment
+          className="filter" // Optional: brightness adjustment
           data-ai-hint="church congregation diverse people wide angle"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -26,18 +26,6 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
-
-      {/* Statement of Faith Section */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">Statement of Faith</h2>
-        <Card className="bg-card p-6 md:p-8 rounded-lg border border-border shadow-sm max-w-4xl mx-auto">
-          <CardContent className="pt-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              We are a Trinitarian Church fully believing in the Bible of 66 Books as God-breathed. We wholeheartedly embrace the Five Solas: Sola Scriptura, Sola Fide, Sola Gratia, Solus Christus, and Soli Deo Gloria. We believe in the vital role of the Church in God's plans, the reality of heaven and hell, angels and demons, the Second Coming of Christ, and the Millennial Kingdom.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
 
       {/* Mission and Vision Section */}
       <section className="mb-16">
@@ -86,20 +74,14 @@ export default function AboutPage() {
             </CardDescription>
           </Card>
            <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
-             {/* Using a placeholder icon or find a suitable one */}
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-primary mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-               <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343M15 7a3 3 0 01-6 0m6 0a3 3 0 00-6 0m6 0v2m-6-2v2m0-2l2-2m-2 2l-2-2m2 2l2 2m-2-2l-2 2M6 11a3 3 0 01-6 0m6 0a3 3 0 00-6 0m6 0v2m-6-2v2m0-2l2-2m-2 2l-2-2m2 2l2 2m-2-2l-2 2m6-6l2-2m-2 2l-2-2m2 2l2 2m-2-2l-2 2" />
-             </svg>
+             <TrendingUp className="h-10 w-10 text-primary mx-auto mb-3" />
             <CardTitle className="text-lg font-medium mb-2 text-card-foreground">Passionate Worship</CardTitle>
             <CardDescription className="text-sm text-muted-foreground">
               Expressing our love for God wholeheartedly.
             </CardDescription>
           </Card>
           <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
-             {/* Using a placeholder icon or find a suitable one */}
-             <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-primary mx-auto mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /> {/* Simple placeholder */}
-             </svg>
+             <Users className="h-10 w-10 text-primary mx-auto mb-3" />
             <CardTitle className="text-lg font-medium mb-2 text-card-foreground">Servant Leadership</CardTitle>
             <CardDescription className="text-sm text-muted-foreground">
                Following Christ's example by serving others.
@@ -108,72 +90,61 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Statement of Faith Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">Statement of Faith</h2>
+        <Card className="bg-card p-6 md:p-8 rounded-lg border border-border shadow-sm max-w-4xl mx-auto">
+          <CardContent className="pt-6">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              We are a Trinitarian Church fully believing in the Bible of 66 Books as God-breathed. We wholeheartedly embrace the Five Solas: Sola Scriptura, Sola Fide, Sola Gratia, Solus Christus, and Soli Deo Gloria. We believe in the vital role of the Church in God's plans, the reality of heaven and hell, angels and demons, the Second Coming of Christ, and the Millennial Kingdom.
+            </p>
+          </CardContent>
+        </Card>
+      </section>
+
       {/* Leadership Section */}
       <section className="mb-16">
-        <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">Our Leadership</h2>
+        <h2 className="text-3xl font-semibold text-center mb-8 text-foreground w-full">Our Leadership</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {/* Leadership Card 1 */}
           <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
             <Image
-              src="https://picsum.photos/200/200?grayscale&random=11" // Replace with actual photo
-              alt="Pastor Name"
+              src="/images/pastor.jpg" // Replace with actual photo
+              alt="Ronald Machu Ocampo"
               width={120}
               height={120}
               className="rounded-full mx-auto mb-4 shadow-md"
               data-ai-hint="headshot portrait pastor"
             />
             <CardHeader className="p-0">
-              <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ptr. Noel P. Due</CardTitle>
+              <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ptr. Ronald Machu Ocampo</CardTitle>
               <CardDescription className="text-md text-primary">Senior Pastor</CardDescription>
             </CardHeader>
             <CardContent className="pt-4">
               <p className="text-sm text-muted-foreground">
-                Pastor Noel has been leading CLHCCU since [Year]. He has a passion for teaching God's Word and seeing lives transformed by the Gospel.
-              </p>
+              BSEE Holy Angel UniversityMasters of Divinity-TheologyBaptist Theological Seminary(PBTS)Cell Church Equipping Center by FCBC SingaporeJohn Maxwell Leadership Training              </p>
             </CardContent>
           </Card>
 
           {/* Leadership Card 2 */}
-          <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
+          <Card className="bg-card p-6 rounded-lg border border-border shadow-sm">
              <Image
-                src="https://picsum.photos/200/200?grayscale&random=12" // Replace with actual photo
-               alt="Leader Name"
+                src="/images/pastorwife.jpg" // Replace with actual photo
+               alt="Ruth Ocampo"
                 width={120}
                height={120}
                 className="rounded-full mx-auto mb-4 shadow-md"
                 data-ai-hint="headshot portrait leader"
              />
-             <CardHeader className="p-0">
-               <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ptr. Reynald D. Guevarra</CardTitle>
-               <CardDescription className="text-md text-primary">Associate Pastor</CardDescription>
+             <CardHeader className="p-0 text-center"> {/* Added text-center here to center title and description if desired, or remove for full left align */}
+               <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ruth Ocampo</CardTitle>
+               <CardDescription className="text-md text-primary">Pastor Wife</CardDescription>
              </CardHeader>
              <CardContent className="pt-4">
                <p className="text-sm text-muted-foreground">
-                 Pastor Reynald oversees our [Specific Ministry, e.g., Community Groups] and is dedicated to fostering discipleship and connection.
-               </p>
+               BS Economics UP DilimanMasters in Business Management UP San FernandoInternational Marketing in EEC by CDG GermanyJohn Maxwell Leadership Training               </p>
              </CardContent>
           </Card>
-
-           {/* Leadership Card 3 - Example Elder/Deacon */}
-           <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
-             <Image
-                src="https://picsum.photos/200/200?grayscale&random=13" // Replace with actual photo
-               alt="Elder Name"
-                width={120}
-               height={120}
-                className="rounded-full mx-auto mb-4 shadow-md"
-                data-ai-hint="headshot portrait elder"
-             />
-             <CardHeader className="p-0">
-               <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Sis. Loida Q. David</CardTitle>
-               <CardDescription className="text-md text-primary">Ministry Head</CardDescription>
-             </CardHeader>
-             <CardContent className="pt-4">
-               <p className="text-sm text-muted-foreground">
-                 Loida serves as a ministry head, providing spiritual oversight and guidance in [Area of Responsibility, e.g., Worship Ministry].
-               </p>
-             </CardContent>
-           </Card>
          </div>
        </section>
 
@@ -225,11 +196,17 @@ export default function AboutPage() {
        </section>
 
        {/* Final Image/Call to Action (Optional) */}
-       {/* <Card className="mt-16 text-center bg-card border border-border shadow-sm p-8 rounded-lg">
-        <CardContent>
-          <Image src="/images/ladder.jpg" alt="church event" width={600} height={400} className="rounded-lg shadow-md object-cover w-full" data-ai-hint="church event diverse people"/>
-        </CardContent>
-      </Card> */}
-    </div>
+       <Card className="mt-16 text-center bg-card border border-border shadow-sm p-8 rounded-lg">
+         <CardContent>
+           <Image 
+            src="/images/ladder.jpg" 
+            alt="church event" 
+            width={600} 
+            height={400} 
+            className="rounded-lg shadow-md object-cover w-full" 
+            data-ai-hint="church event diverse people"/>
+         </CardContent>
+      </Card>
+    </div> 
   );
 }

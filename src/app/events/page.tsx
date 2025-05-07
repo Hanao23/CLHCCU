@@ -1,5 +1,5 @@
 import { Calendar, MapPin } from 'lucide-react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
 // Sample event data - replace with dynamic data source later
