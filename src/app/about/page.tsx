@@ -106,7 +106,7 @@ export default function AboutPage(): JSX.Element {
       {/* Leadership Section */}
       <section className="mb-16">
         <h2 className="text-3xl font-semibold text-center mb-8 text-foreground w-full">Our Leadership</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Leadership Card 1 */}
           <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
             <Image
@@ -128,20 +128,20 @@ export default function AboutPage(): JSX.Element {
           </Card>
 
           {/* Leadership Card 2 - Ruth Ocampo */}
-          <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm"> {/* Added text-center */}
+          <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
              <Image
                 src="/images/pastorwife.jpg" // Replace with actual photo
                alt="Ruth Ocampo"
                 width={150}
                height={150}
-                className="rounded-full mx-auto mb-4 shadow-md" // Ensured mx-auto and removed float
+                className="rounded-full mx-auto mb-4 shadow-md"
              />
-             <div> {/* Removed md:overflow-hidden */}
-                <CardHeader className="p-0"> {/* Removed text-left, will inherit from Card */}
+             <div> 
+                <CardHeader className="p-0"> 
                   <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ruth Ocampo</CardTitle>
                   <CardDescription className="text-md text-primary">Pastor Wife</CardDescription>
                 </CardHeader>
-                <CardContent className="pt-4"> {/* Removed text-left, will inherit from Card */}
+                <CardContent className="pt-4"> 
                   <p className="text-sm text-muted-foreground">
                   BS Economics UP DilimanMasters in Business Management UP San FernandoInternational Marketing in EEC by CDG GermanyJohn Maxwell Leadership Training                  </p>
                 </CardContent>
