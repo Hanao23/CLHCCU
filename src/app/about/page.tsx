@@ -132,8 +132,8 @@ export default function AboutPage(): JSX.Element {
              <Image
                 src="/images/pastorwife.jpg" // Replace with actual photo
                alt="Ruth Ocampo"
-                width={150}
-               height={150}
+                width={120}
+               height={120}
                 className="rounded-full mx-auto mb-4 shadow-md"
              />
              <div> 

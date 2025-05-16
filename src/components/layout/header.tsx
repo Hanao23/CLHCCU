@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetClose } from '@/components/ui/sheet';
 import { Menu, X } from 'lucide-react';
 
 // Inline SVG for TikTok Icon
@@ -24,21 +24,21 @@ const navLinks = [
 
 export function Header() {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false); // State to track client-side execution
+  const [isClient, setIsClient] = useState(false);
 
-   // Determine initial styles based *only* on pathname (consistent server/client)
-   const isOnHomepage = pathname === '/';
-   const initialHeaderBgClass = isOnHomepage ? 'bg-transparent' : 'bg-background/95 shadow-md backdrop-blur-sm';
-   const initialHeaderBorderClass = isOnHomepage ? 'border-transparent' : 'border-border';
-   const initialTextClass = isOnHomepage ? 'text-white drop-shadow-md' : 'text-foreground';
-   const initialHoverTextClass = isOnHomepage ? 'hover:text-gray-200 drop-shadow-sm' : 'hover:text-primary';
-   const initialDonateButtonVariant = isOnHomepage ? 'outline' : 'secondary';
-   const initialDonateButtonClass = isOnHomepage
-     ? 'border-white text-white bg-transparent hover:bg-white hover:text-black'
-     : 'bg-gray-700 hover:bg-gray-600 text-white';
-   const initialMobileTriggerClass = isOnHomepage ? 'text-white hover:bg-white/10' : 'text-foreground';
+  // Determine initial styles based *only* on pathname (consistent server/client)
+  const isOnHomepage = pathname === '/';
+  const initialHeaderBgClass = isOnHomepage ? 'bg-transparent' : 'bg-background/95 shadow-md backdrop-blur-sm';
+  const initialHeaderBorderClass = isOnHomepage ? 'border-transparent' : 'border-border';
+  const initialTextClass = isOnHomepage ? 'text-white drop-shadow-md' : 'text-foreground';
+  const initialHoverTextClass = isOnHomepage ? 'hover:text-gray-200 drop-shadow-sm' : 'hover:text-primary';
+  const initialDonateButtonVariant = isOnHomepage ? 'outline' : 'secondary';
+  const initialDonateButtonClass = isOnHomepage
+    ? 'border-white text-white bg-transparent hover:bg-white hover:text-black'
+    : 'bg-gray-700 hover:bg-gray-600 text-white';
+  const initialMobileTriggerClass = isOnHomepage ? 'text-white hover:bg-white/10' : 'text-foreground hover:bg-accent';
+
 
   // State to hold the dynamic classes, initialized with pathname-based values
   const [headerBgClass, setHeaderBgClass] = useState(initialHeaderBgClass);
@@ -55,7 +55,6 @@ export function Header() {
 
     const handleScroll = () => {
       const currentScrollState = window.scrollY > 10;
-      setIsScrolled(currentScrollState);
 
       // Update styles based on scroll and pathname *only on the client*
       const useScrolledStyles = currentScrollState || pathname !== '/';
@@ -67,32 +66,41 @@ export function Header() {
       setDonateButtonClass(useScrolledStyles
         ? 'bg-gray-700 hover:bg-gray-600 text-white'
         : 'border-white text-white bg-transparent hover:bg-white hover:text-black');
-      setMobileTriggerClass(useScrolledStyles ? 'text-foreground' : 'text-white hover:bg-white/10');
+      setMobileTriggerClass(useScrolledStyles ? 'text-foreground hover:bg-accent' : 'text-white hover:bg-white/10');
     };
 
-    // Set initial scroll state on mount
-    handleScroll();
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [pathname]); // Re-run effect if pathname changes
+    // Set initial scroll state on mount if window is defined
+    if (typeof window !== 'undefined') {
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }
+  }, [pathname]); // Re-run effect if pathname changes or on initial client mount
 
   // Close mobile menu on route change
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  // Render based on client state to avoid hydration mismatch for dynamic classes
+  // If not client yet, render with initial (pathname-based) styles
+  const currentHeaderBg = isClient ? headerBgClass : initialHeaderBgClass;
+  const currentHeaderBorder = isClient ? headerBorderClass : initialHeaderBorderClass;
+  const currentText = isClient ? textClass : initialTextClass;
+  const currentHoverText = isClient ? hoverTextClass : initialHoverTextClass;
+  const currentDonateVariant = isClient ? donateButtonVariant : initialDonateButtonVariant;
+  const currentDonateClass = isClient ? donateButtonClass : initialDonateButtonClass;
+  const currentMobileTrigger = isClient ? mobileTriggerClass : initialMobileTriggerClass;
+
 
   return (
     <header
-      // Apply the dynamic classes from state
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBgClass} border-b ${headerBorderClass}`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${currentHeaderBg} border-b ${currentHeaderBorder}`}
     >
       <div className="container mx-auto px-4 h-16 flex justify-between items-center">
         <Link
           href="/"
-          // Apply dynamic text class
-          className={`text-xl transition-colors duration-300 ${pathname === '/' ? 'font-bold' : 'font-normal'} ${textClass}`}>
+          className={`text-xl transition-colors duration-300 ${pathname === '/' ? 'font-bold' : 'font-normal'} ${currentText}`}>
           CLHCCU
         </Link>
 
@@ -102,14 +110,12 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              // Apply dynamic text and hover classes
-              className={`text-sm font-medium transition-colors ${hoverTextClass} ${textClass}`}
+              className={`text-sm font-medium transition-colors ${currentHoverText} ${currentText}`}
             >
               {link.label}
             </Link>
           ))}
-          {/* Apply dynamic button variant and class */}
-          <Button asChild variant={donateButtonVariant} className={donateButtonClass}>
+          <Button asChild variant={currentDonateVariant} className={currentDonateClass}>
             <Link href="/donate">Donate</Link>
           </Button>
         </nav>
@@ -117,36 +123,38 @@ export function Header() {
         {/* Mobile Navigation Trigger */}
         <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
           <SheetTrigger asChild className="md:hidden">
-            {/* Apply dynamic trigger class */}
-            <Button variant="ghost" size="icon" className={mobileTriggerClass}>
+            <Button variant="ghost" size="icon" className={currentMobileTrigger}>
               <Menu className="h-6 w-6" />
               <span className="sr-only">Open menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[280px] bg-background p-0">
-             <div className="flex justify-between items-center p-4 border-b">
-               <Link
-                  href="/"
-                  className={`text-xl ${pathname === '/' ? 'font-bold' : 'font-normal'} text-foreground`} onClick={() => setMobileMenuOpen(false)}>
-                  CLHCCU
-                </Link>
-                 <Button variant="ghost" size="icon" onClick={() => setMobileMenuOpen(false)}>
+             <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
+               <SheetTitle asChild>
+                 <Link
+                    href="/"
+                    className={`text-xl ${pathname === '/' ? 'font-bold' : 'font-normal'} text-foreground`}
+                    onClick={() => setMobileMenuOpen(false)}>
+                    CLHCCU
+                 </Link>
+               </SheetTitle>
+               <SheetClose asChild>
+                 <Button variant="ghost" size="icon" aria-label="Close menu">
                     <X className="h-6 w-6" />
-                    <span className="sr-only">Close menu</span>
-                </Button>
-            </div>
+                 </Button>
+               </SheetClose>
+            </SheetHeader>
             <nav className="flex flex-col space-y-4 p-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  onClick={() => setMobileMenuOpen(false)} // Close menu on link click
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
-              {/* Mobile donate button uses a consistent style */}
               <Button asChild variant="secondary" size="lg" className="w-full bg-gray-700 hover:bg-gray-600 text-white" onClick={() => setMobileMenuOpen(false)}>
                 <Link href="/donate">Donate</Link>
               </Button>
