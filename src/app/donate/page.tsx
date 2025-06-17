@@ -11,25 +11,7 @@ export default function DonatePage() {
         Your generosity fuels the mission of Christ The Living Hope Community Church United. Through your giving, we can continue to share the hope of Christ, serve our community, and reach the world. Thank you for partnering with us.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <Card className="text-center bg-card border-border shadow-sm">
-          <CardHeader>
-            <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
-              <CreditCard className="h-8 w-8" />
-            </div>
-            <CardTitle className="text-xl font-semibold text-card-foreground">Online Giving</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <CardDescription className="text-muted-foreground mb-6">
-              Securely give a one-time or recurring gift using your debit card, credit card, or bank account.
-            </CardDescription>
-            {/* Replace '#' with your actual online giving link */}
-            <Button className="w-full" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer">Give Online</a>
-            </Button>
-          </CardContent>
-        </Card>
-
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <Card className="text-center bg-card border-border shadow-sm">
           <CardHeader>
              <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">
