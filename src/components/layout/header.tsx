@@ -103,9 +103,9 @@ export function Header() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[280px] bg-black/20 backdrop-blur-xl p-0 border-l border-white/20"
+            className="w-[280px] bg-black/50 backdrop-blur-2xl p-0 border-l border-white/30"
           >
-            <SheetHeader className="flex flex-row justify-between items-center p-4 border-b border-white/20">
+            <SheetHeader className="flex flex-row justify-between items-center p-4 border-b border-white/30">
               <SheetTitle asChild>
                 <Link
                   href="/"
