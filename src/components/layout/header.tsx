@@ -162,7 +162,7 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden md:flex items-center space-x-6 h-10">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -191,9 +191,9 @@ export function Header() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[280px] bg-background/80 backdrop-blur-sm p-0"
+            className="w-[280px] bg-background/50 backdrop-blur-lg p-0 border-l border-border/30"
           >
-            <SheetHeader className="flex flex-row justify-between items-center p-4 border-b">
+            <SheetHeader className="flex flex-row justify-between items-center p-4 border-b border-border/30">
               <SheetTitle asChild>
                 <Link
                   href="/"
