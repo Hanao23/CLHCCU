@@ -9,7 +9,7 @@ export default function AboutPage(): JSX.Element {
       {/* Hero Image Section */}
       <div className="mb-16 relative h-[40vh] md:h-[50vh] rounded-lg overflow-hidden shadow-lg">
         <Image
-          src="/images/statementoffaith.jpg" // Replace with a relevant hero image if available
+          src="/images/sfaith.jpg" // Replace with a relevant hero image if available
           fill
           style={{ objectFit: 'cover', objectPosition: 'center' }}
           alt="Statement Of Faith Banner"
