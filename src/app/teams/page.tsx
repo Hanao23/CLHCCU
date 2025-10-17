@@ -193,6 +193,187 @@ export default function TeamsPage() {
           </CardContent>
         </Card>
 
+        {/* Duplicated Cards Start Here */}
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=10"
+            alt="Worship Team"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+             data-ai-hint="worship music instruments"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Worship & Arts Team</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Leading our congregation in meaningful worship through music, vocals, and creative arts during our services.
+            </CardDescription>
+            <p className="text-sm text-foreground font-medium">Contact: worship@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum_photos/400/250?grayscale&random=11"
+            alt="Children's Ministry"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="children playing learning"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Children's Ministry (Hope Kids)</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Providing a safe, fun, and engaging environment for children to learn about God's love and foundational biblical truths.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: kids@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=12"
+            alt="Youth Group"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="teenagers group discussion"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Youth Ministry (Ignite Youth)</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Connecting teenagers with God and each other through relevant teaching, fun activities, and supportive relationships.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: youth@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=13"
+            alt="Hospitality Team"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+             data-ai-hint="welcoming handshake smile"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Hospitality & Welcome Team</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Creating a warm and welcoming atmosphere for everyone who walks through our doors, from greeting to serving refreshments.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: welcome@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=14"
+            alt="Outreach Team"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="community service helping hands"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Community Outreach Team</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Serving our local community through various projects and partnerships, demonstrating God's love in practical ways.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: outreach@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+         <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=15"
+            alt="Tech Team"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="sound board computer screen"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Tech & Media Team</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Supporting our services and events with sound, lighting, visuals, and online streaming capabilities.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: tech@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=16"
+            alt="Prayer Ministry"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="praying hands bible"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Prayer Ministry</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+             Dedicated to interceding for our church, community, and the world. Join us to seek God's heart through prayer.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: prayer@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=17"
+            alt="Men's Ministry"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="men talking group"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Men's Ministry</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Building strong men of faith through fellowship, accountability, and studying God's Word together.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: men@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=18"
+            alt="Women's Ministry"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="women talking group"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Women's Ministry</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Creating a community for women to connect, grow in their faith, and encourage one another in all seasons of life.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: women@clhccu.org</p>
+          </CardContent>
+        </Card>
+
       </div>
 
        <div className="text-center mt-16">
