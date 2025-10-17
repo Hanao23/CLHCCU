@@ -1,3 +1,4 @@
+
 import Image from "next/legacy/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
@@ -128,6 +129,66 @@ export default function TeamsPage() {
               Supporting our services and events with sound, lighting, visuals, and online streaming capabilities.
             </CardDescription>
              <p className="text-sm text-foreground font-medium">Contact: tech@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=7"
+            alt="Prayer Ministry"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="praying hands bible"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Prayer Ministry</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+             Dedicated to interceding for our church, community, and the world. Join us to seek God's heart through prayer.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: prayer@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=8"
+            alt="Men's Ministry"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="men talking group"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Men's Ministry</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Building strong men of faith through fellowship, accountability, and studying God's Word together.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: men@clhccu.org</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-card border-border shadow-sm overflow-hidden">
+          <Image
+            src="https://picsum.photos/400/250?grayscale&random=9"
+            alt="Women's Ministry"
+            width={400}
+            height={250}
+            className="w-full object-cover"
+            data-ai-hint="women talking group"
+          />
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Women's Ministry</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CardDescription className="text-muted-foreground mb-4">
+              Creating a community for women to connect, grow in their faith, and encourage one another in all seasons of life.
+            </CardDescription>
+             <p className="text-sm text-foreground font-medium">Contact: women@clhccu.org</p>
           </CardContent>
         </Card>
 
