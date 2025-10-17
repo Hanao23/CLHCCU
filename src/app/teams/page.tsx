@@ -27,7 +27,7 @@ export default function TeamsPage() {
           </CardHeader>
           <CardContent>
             <CardDescription className="text-muted-foreground mb-4">
-             Associate Pastor
+             Sta. Ana
             </CardDescription>
             <p className="text-sm text-foreground font-medium">Contact: jerome.tupe@clhccu.org</p>
           </CardContent>
