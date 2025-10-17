@@ -29,7 +29,6 @@ export default function TeamsPage() {
             <CardDescription className="text-muted-foreground mb-4">
              Sta. Ana
             </CardDescription>
-            <p className="text-sm text-foreground font-medium">Contact: jerome.tupe@clhccu.org</p>
           </CardContent>
         </Card>
 
@@ -388,5 +387,7 @@ export default function TeamsPage() {
     </div>
   );
 }
+
+    
 
     
