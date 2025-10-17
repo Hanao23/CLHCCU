@@ -250,6 +250,183 @@ export default function TeamsPage() {
                 <p className="text-sm text-foreground font-medium">Contact: youth@clhccu.org</p>
             </CardContent>
             </Card>
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=13"
+                alt="Worship Team"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="worship music instruments"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Worship & Arts Team</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Leading our congregation in meaningful worship through music, vocals, and creative arts during our services.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: worship@clhccu.org</p>
+            </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=14"
+                alt="Children's Ministry"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="children playing learning"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Children's Ministry (Hope Kids)</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Providing a safe, fun, and engaging environment for children to learn about God's love and foundational biblical truths.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: kids@clhccu.org</p>
+            </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=15"
+                alt="Youth Group"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="teenagers group discussion"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Youth Ministry (Ignite Youth)</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Connecting teenagers with God and each other through relevant teaching, fun activities, and supportive relationships.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: youth@clhccu.org</p>
+            </CardContent>
+            </Card>
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=16"
+                alt="Worship Team"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="worship music instruments"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Worship & Arts Team</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Leading our congregation in meaningful worship through music, vocals, and creative arts during our services.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: worship@clhccu.org</p>
+            </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=17"
+                alt="Children's Ministry"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="children playing learning"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Children's Ministry (Hope Kids)</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Providing a safe, fun, and engaging environment for children to learn about God's love and foundational biblical truths.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: kids@clhccu.org</p>
+            </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=18"
+                alt="Youth Group"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="teenagers group discussion"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Youth Ministry (Ignite Youth)</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Connecting teenagers with God and each other through relevant teaching, fun activities, and supportive relationships.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: youth@clhccu.org</p>
+            </CardContent>
+            </Card>
+             <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=19"
+                alt="Worship Team"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="worship music instruments"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Worship & Arts Team</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Leading our congregation in meaningful worship through music, vocals, and creative arts during our services.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: worship@clhccu.org</p>
+            </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=20"
+                alt="Children's Ministry"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="children playing learning"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Children's Ministry (Hope Kids)</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Providing a safe, fun, and engaging environment for children to learn about God's love and foundational biblical truths.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: kids@clhccu.org</p>
+            </CardContent>
+            </Card>
+
+            <Card className="bg-card border-border shadow-sm overflow-hidden">
+            <Image
+                src="https://picsum.photos/400/250?grayscale&random=21"
+                alt="Youth Group"
+                width={400}
+                height={250}
+                className="w-full object-cover"
+                data-ai-hint="teenagers group discussion"
+            />
+            <CardHeader>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Youth Ministry (Ignite Youth)</CardTitle>
+            </CardHeader>
+            <CardContent>
+                <CardDescription className="text-muted-foreground mb-4">
+                Connecting teenagers with God and each other through relevant teaching, fun activities, and supportive relationships.
+                </CardDescription>
+                <p className="text-sm text-foreground font-medium">Contact: youth@clhccu.org</p>
+            </CardContent>
+            </Card>
         </div>
 
 
