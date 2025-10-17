@@ -85,7 +85,7 @@ export default function AboutPage(): JSX.Element {
              <Users className="h-10 w-10 text-primary mx-auto mb-3" />
             <CardTitle className="text-lg font-medium mb-2 text-card-foreground">Servant Leadership</CardTitle>
             <CardDescription className="text-sm text-muted-foreground">
-               Following Christ's example by serving others.
+               Following Christ's by being a Leader.
              </CardDescription>
           </Card>
         </div>
@@ -106,7 +106,7 @@ export default function AboutPage(): JSX.Element {
       {/* Leadership Section */}
       <section className="mb-16">
         <h2 className="text-3xl font-semibold text-center mb-8 text-foreground w-full">Our Leadership</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto justify-center">
           {/* Leadership Card 1 */}
           <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
             <Image
@@ -203,14 +203,12 @@ export default function AboutPage(): JSX.Element {
            <Image
             src="/images/ladder.jpg"
             alt="church event"
-            width={600}
-            height={400}
-            className="rounded-lg shadow-md object-cover w-full"
+            width={350}
+            height={350}
+            className="rounded-full shadow-md object-cover mx-auto"
             data-ai-hint="church event diverse people"/>
          </CardContent>
       </Card>
     </div>
   );
 }
-
-    

@@ -11,7 +11,7 @@ export default function DonatePage() {
         Your generosity fuels the mission of Christ The Living Hope Community Church United. Through your giving, we can continue to share the hope of Christ, serve our community, and reach the world. Thank you for partnering with us.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 max-w-4xl mx-auto">
         <Card className="text-center bg-card border-border shadow-sm">
           <CardHeader>
              <div className="mx-auto bg-primary text-primary-foreground rounded-full p-3 w-fit mb-4">

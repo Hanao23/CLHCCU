@@ -30,8 +30,10 @@ export function Header() {
     const handleScroll = () => {
       setHasScrolled(window.scrollY > 10);
     };
+    
+    // Set initial state on mount for client to avoid hydration mismatch
+    handleScroll();
 
-    handleScroll(); // Set initial state on mount for client
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -41,6 +43,7 @@ export function Header() {
   }, [pathname]);
 
   const isOnHomepage = pathname === '/';
+  // Derive transparency state from hasScrolled, which is now safe from hydration mismatch
   const isTransparent = isOnHomepage && !hasScrolled;
 
   const headerClasses = isTransparent
@@ -103,47 +106,49 @@ export function Header() {
           </SheetTrigger>
           <SheetContent
             side="right"
-            className="w-[280px] bg-black/50 backdrop-blur-2xl p-0 border-l border-white/30"
+            className="w-full h-full bg-black/20 backdrop-blur-xl p-0 border-l-0"
           >
-            <SheetHeader className="flex flex-row justify-between items-center p-4 border-b border-white/30">
-              <SheetTitle asChild>
-                <Link
-                  href="/"
-                  className="text-xl text-white drop-shadow-md"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  CLHCCU
-                </Link>
-              </SheetTitle>
-              <SheetClose asChild>
-                <Button variant="ghost" size="icon" className="text-white hover:bg-white/10" aria-label="Close menu">
-                  <X className="h-6 w-6" />
-                </Button>
-              </SheetClose>
-            </SheetHeader>
-            <nav className="flex flex-col space-y-2 p-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-lg font-medium text-white drop-shadow-sm rounded-lg p-3 transition-all duration-300 hover:bg-white/20 hover:pl-5"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <div className="pt-4">
-                <Button
-                  asChild
-                  variant="outline"
-                  size="lg"
-                  className="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <Link href="/donate">Donate</Link>
-                </Button>
-              </div>
-            </nav>
+            <div className="flex flex-col h-full">
+              <SheetHeader className="flex flex-row justify-between items-center p-4 border-b border-white/20">
+                <SheetTitle asChild>
+                  <Link
+                    href="/"
+                    className="text-xl text-white drop-shadow-md"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    CLHCCU
+                  </Link>
+                </SheetTitle>
+                <SheetClose asChild>
+                  <Button variant="ghost" size="icon" className="text-white hover:bg-white/10" aria-label="Close menu">
+                    <X className="h-6 w-6" />
+                  </Button>
+                </SheetClose>
+              </SheetHeader>
+              <nav className="flex flex-col items-center justify-center flex-1 space-y-6">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-2xl font-medium text-white drop-shadow-sm rounded-lg p-3 transition-all duration-300 transform hover:scale-110 hover:bg-white/10"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <div className="pt-8">
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="w-full bg-transparent border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    <Link href="/donate">Donate</Link>
+                  </Button>
+                </div>
+              </nav>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
