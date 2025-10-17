@@ -194,20 +194,19 @@ export default function TeamsPage() {
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
                 src="https://picsum.photos/400/250?grayscale&random=10"
-                alt="Worship Team"
+                alt="Carl Jason Coronel"
                 width={400}
                 height={250}
                 className="w-full object-cover"
                 data-ai-hint="worship music instruments"
             />
             <CardHeader>
-                <CardTitle className="text-xl font-semibold text-card-foreground">Worship & Arts Team</CardTitle>
+                <CardTitle className="text-xl font-semibold text-card-foreground">Carl Jason Coronel</CardTitle>
             </CardHeader>
             <CardContent>
                 <CardDescription className="text-muted-foreground mb-4">
-                Leading our congregation in meaningful worship through music, vocals, and creative arts during our services.
+                
                 </CardDescription>
-                <p className="text-sm text-foreground font-medium">Contact: worship@clhccu.org</p>
             </CardContent>
             </Card>
 
