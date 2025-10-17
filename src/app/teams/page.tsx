@@ -216,7 +216,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum_photos/400/250?grayscale&random=11"
+            src="https://picsum.photos/400/250?grayscale&random=11"
             alt="Children's Ministry"
             width={400}
             height={250}
@@ -388,3 +388,5 @@ export default function TeamsPage() {
     </div>
   );
 }
+
+    
