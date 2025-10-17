@@ -70,10 +70,10 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="md:w-1/2">
             <Image
-              src="/images/event-image.jpg"
+              src="/images/34anniversary.jpg"
               alt="Events"
               width={600}
-              height={400}
+              height={500}
               className="rounded-lg shadow-md object-cover w-full"
               data-ai-hint="community event people food"
             />

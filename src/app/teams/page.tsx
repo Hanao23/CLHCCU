@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/com
 export default function TeamsPage() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-24">
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">Our Ministry Teams</h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-foreground">Our Teams</h1>
       <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-16">
         Serving is at the heart of our church community. Our ministry teams provide opportunities for everyone to use their unique gifts and talents to bless others and build up the body of Christ. Find a place where you can connect and make a difference!
       </p>
