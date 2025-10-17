@@ -19,7 +19,7 @@ export default function TeamsPage() {
             alt="Ps. Jerome Tupe"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
              data-ai-hint="headshot portrait pastor"
           />
           <CardHeader>
@@ -38,7 +38,7 @@ export default function TeamsPage() {
             alt="Ps. Lounel lugtu"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
             data-ai-hint="children playing learning"
           />
           <CardHeader>
@@ -57,7 +57,7 @@ export default function TeamsPage() {
             alt="Ps. Gloria C. David"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
             data-ai-hint="teenagers group discussion"
           />
           <CardHeader>
@@ -76,7 +76,7 @@ export default function TeamsPage() {
             alt="Ps. Je Anne B. Santos"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
              data-ai-hint="welcoming handshake smile"
           />
           <CardHeader>
@@ -95,7 +95,7 @@ export default function TeamsPage() {
             alt="Ps. Crisanto Tupe Jr."
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
             data-ai-hint="community service helping hands"
           />
           <CardHeader>
@@ -114,7 +114,7 @@ export default function TeamsPage() {
             alt="Ps. Andrew Vitug"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
             data-ai-hint="sound board computer screen"
           />
           <CardHeader>
@@ -133,7 +133,7 @@ export default function TeamsPage() {
             alt="Ps. Michelle L. Serrano"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
             data-ai-hint="praying hands bible"
           />
           <CardHeader>
@@ -153,7 +153,7 @@ export default function TeamsPage() {
             alt="Ps. Resmilito Ramos"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
             data-ai-hint="men talking group"
           />
           <CardHeader>
@@ -172,7 +172,7 @@ export default function TeamsPage() {
             alt="Ps. Ericson Dela Cruz"
             width={400}
             height={250}
-            className="w-full object-cover"
+            className="w-full h-48 object-cover"
             data-ai-hint="women talking group"
           />
           <CardHeader>
@@ -197,7 +197,7 @@ export default function TeamsPage() {
                 alt="Carl Jason Coronel"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="worship music instruments"
             />
             <CardHeader>
@@ -216,7 +216,7 @@ export default function TeamsPage() {
                 alt="Children's Ministry"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="children playing learning"
             />
             <CardHeader>
@@ -236,7 +236,7 @@ export default function TeamsPage() {
                 alt="Youth Group"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="teenagers group discussion"
             />
             <CardHeader>
@@ -255,7 +255,7 @@ export default function TeamsPage() {
                 alt="Worship Team"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="worship music instruments"
             />
             <CardHeader>
@@ -275,7 +275,7 @@ export default function TeamsPage() {
                 alt="Children's Ministry"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="children playing learning"
             />
             <CardHeader>
@@ -295,7 +295,7 @@ export default function TeamsPage() {
                 alt="Youth Group"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="teenagers group discussion"
             />
             <CardHeader>
@@ -314,7 +314,7 @@ export default function TeamsPage() {
                 alt="Worship Team"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="worship music instruments"
             />
             <CardHeader>
@@ -334,7 +334,7 @@ export default function TeamsPage() {
                 alt="Children's Ministry"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="children playing learning"
             />
             <CardHeader>
@@ -354,7 +354,7 @@ export default function TeamsPage() {
                 alt="Youth Group"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="teenagers group discussion"
             />
             <CardHeader>
@@ -373,7 +373,7 @@ export default function TeamsPage() {
                 alt="Worship Team"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="worship music instruments"
             />
             <CardHeader>
@@ -393,7 +393,7 @@ export default function TeamsPage() {
                 alt="Children's Ministry"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="children playing learning"
             />
             <CardHeader>
@@ -413,7 +413,7 @@ export default function TeamsPage() {
                 alt="Youth Group"
                 width={400}
                 height={250}
-                className="w-full object-cover"
+                className="w-full h-48 object-cover"
                 data-ai-hint="teenagers group discussion"
             />
             <CardHeader>
