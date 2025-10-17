@@ -10,6 +10,54 @@ export default function TeamsPage() {
         Serving is at the heart of our church community. Our ministry teams provide opportunities for everyone to use their unique gifts and talents to bless others and build up the body of Christ. Find a place where you can connect and make a difference!
       </p>
 
+      {/* Leadership Section */}
+      <section className="mb-16">
+        <h2 className="text-3xl font-semibold text-center mb-8 text-foreground w-full">Our Pastors</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto justify-center">
+          {/* Leadership Card 1 */}
+          <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
+            <Image
+              src="/images/pastor.jpg" // Replace with actual photo
+              alt="Ronald Machu Ocampo"
+              width={120}
+              height={120}
+              className="rounded-full mx-auto mb-4 shadow-md object-cover"
+              data-ai-hint="headshot portrait pastor"
+            />
+            <CardHeader className="p-0">
+              <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ptr. Ronald Machu Ocampo</CardTitle>
+              <CardDescription className="text-md text-primary">Senior Pastor</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-4">
+              <p className="text-sm text-muted-foreground">
+              BSEE Holy Angel UniversityMasters of Divinity-TheologyBaptist Theological Seminary(PBTS)Cell Church Equipping Center by FCBC SingaporeJohn Maxwell Leadership Training              </p>
+            </CardContent>
+          </Card>
+
+          {/* Leadership Card 2 - Ruth Ocampo */}
+          <Card className="text-center bg-card p-6 rounded-lg border border-border shadow-sm">
+             <Image
+                src="/images/pastorwife.jpg" // Replace with actual photo
+               alt="Ruth Ocampo"
+                width={120}
+               height={120}
+                className="rounded-full mx-auto mb-4 shadow-md object-cover"
+             />
+             <div> 
+                <CardHeader className="p-0"> 
+                  <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ruth Ocampo</CardTitle>
+                  <CardDescription className="text-md text-primary">Pastor's Wife</CardDescription>
+                </CardHeader>
+                <CardContent className="pt-4"> 
+                  <p className="text-sm text-muted-foreground">
+                  BS Economics UP DilimanMasters in Business Management UP San FernandoInternational Marketing in EEC by CDG GermanyJohn Maxwell Leadership Training                  </p>
+                </CardContent>
+             </div>
+          </Card>
+         </div>
+       </section>
+
+      <h2 className="text-3xl font-semibold text-center mb-8 text-foreground">Our Ministry Teams</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Team Card Example */}
         <Card className="bg-card border-border shadow-sm overflow-hidden">
