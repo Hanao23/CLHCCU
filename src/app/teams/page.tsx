@@ -15,21 +15,21 @@ export default function TeamsPage() {
         {/* Team Card Example */}
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=1"
-            alt="Worship Team"
+            src="https://picsum.photos/seed/pastor1/400/250"
+            alt="Ps. Jerome Tupe"
             width={400}
             height={250}
             className="w-full object-cover"
-             data-ai-hint="worship music instruments"
+             data-ai-hint="headshot portrait pastor"
           />
           <CardHeader>
-            <CardTitle className="text-xl font-semibold text-card-foreground">Worship & Arts Team</CardTitle>
+            <CardTitle className="text-xl font-semibold text-card-foreground">Ps. Jerome Tupe</CardTitle>
           </CardHeader>
           <CardContent>
             <CardDescription className="text-muted-foreground mb-4">
-              Leading our congregation in meaningful worship through music, vocals, and creative arts during our services.
+             Associate Pastor
             </CardDescription>
-            <p className="text-sm text-foreground font-medium">Contact: worship@clhccu.org</p>
+            <p className="text-sm text-foreground font-medium">Contact: jerome.tupe@clhccu.org</p>
           </CardContent>
         </Card>
 
