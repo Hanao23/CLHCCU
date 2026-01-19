@@ -37,7 +37,7 @@ const events = [
   },
    {
     id: 4,
-    title: "Youth Group Game Night",
+    title: "90 Days Challenge",
     date: "July 26th, 2024",
     time: "6:30 PM - 9:00 PM",
     description: "An exciting night of games, snacks, and fun for all teenagers (Grades 7-12).",
