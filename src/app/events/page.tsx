@@ -6,7 +6,11 @@ const events = [
   {
     id: 1,
     title: "Sunday Worship Service",
-    date: "First Service 8:00 AM - 10:00 AM Second Service 11:00 AM - 1:00 PM Third Service 4:00 PM - 6:00 PM",
+    date: [
+      "First Service 8:00 AM - 10:00 AM",
+      "Second Service 11:00 AM - 1:00 PM",
+      "Third Service 4:00 PM - 6:00 PM",
+    ],
     time: null,
     description: "Join us for our weekly gathering featuring worship, teaching, and fellowship.",
   },
@@ -49,8 +53,12 @@ export default function EventsPage() {
             </CardHeader>
             <CardContent className="p-0 flex-grow flex flex-col justify-between">
               <div>
-                <div className="flex items-center text-sm text-muted-foreground mb-2">
-                  <span>{event.date}{event.time ? ` at ${event.time}` : ''}</span>
+                <div className="text-sm text-muted-foreground mb-2">
+                  {Array.isArray(event.date) ? (
+                    event.date.map((d, i) => <div key={i}>{d}</div>)
+                  ) : (
+                    <span>{event.date}{event.time ? ` at ${event.time}` : ''}</span>
+                  )}
                 </div>
                 <CardDescription className="text-muted-foreground">
                   {event.description}
