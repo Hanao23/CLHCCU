@@ -7,12 +7,9 @@ const events = [
   {
     id: 1,
     title: "Sunday Worship Service",
-    date: "Every Sunday",
-    time: "10:00 AM - 11:30 AM",
+    date: "First Service 8:00 AM - 10:00 AM Second Service 11:00 AM - 1:00 PM Third Service 4:00 PM - 6:00 PM",
+    time: null,
     description: "Join us for our weekly gathering featuring worship, teaching, and fellowship.",
-    image: "/images/sunday_worship.jpg",
-    imageAlt: "Worship service",
-    imageHint: "pastor singing worship"
   },
   {
     id: 2,
@@ -20,9 +17,6 @@ const events = [
     date: "Every Wednesday",
     time: "6:30 PM",
     description: "Dive deeper into God's Word with us during our interactive midweek study group.",
-     image: "https://picsum.photos/seed/bible-study/800/500",
-    imageAlt: "Bible study group",
-     imageHint: "people studying bible books"
   },
   {
     id: 3,
@@ -30,9 +24,6 @@ const events = [
     date: "July 20th, 2024",
     time: "12:00 PM - 4:00 PM",
     description: "A fun-filled day of food, games, and fellowship for the whole church family and community.",
-    image: "https://picsum.photos/seed/picnic/800/500",
-    imageAlt: "Community picnic",
-     imageHint: "park picnic people food"
   },
    {
     id: 4,
@@ -40,9 +31,6 @@ const events = [
     date: "July 26th, 2024",
     time: "6:30 PM - 9:00 PM",
     description: "An exciting night of games, snacks, and fun for all teenagers (Grades 7-12).",
-     image: "https://picsum.photos/seed/game-night/800/500",
-    imageAlt: "Youth game night",
-     imageHint: "teenagers playing games board games"
   },
 ];
 
@@ -64,7 +52,7 @@ export default function EventsPage() {
               <div>
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
                   <Calendar className="mr-2 h-4 w-4" />
-                  <span>{event.date} at {event.time}</span>
+                  <span>{event.date}{event.time ? ` at ${event.time}` : ''}</span>
                 </div>
                 <CardDescription className="text-muted-foreground">
                   {event.description}
