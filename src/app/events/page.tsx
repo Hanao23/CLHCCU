@@ -1,3 +1,4 @@
+
 import { Calendar, MapPin } from 'lucide-react';
 import Image from "next/legacy/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
@@ -77,10 +78,6 @@ export default function EventsPage() {
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
                   <Calendar className="mr-2 h-4 w-4" />
                   <span>{event.date} at {event.time}</span>
-                </div>
-                <div className="flex items-center text-sm text-muted-foreground mb-4">
-                  <MapPin className="mr-2 h-4 w-4" />
-                  <span>{event.location}</span>
                 </div>
                 <CardDescription className="text-muted-foreground mb-4">
                   {event.description}
