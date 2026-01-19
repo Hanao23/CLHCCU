@@ -1,6 +1,5 @@
 
-import { Calendar, MapPin } from 'lucide-react';
-import Image from "next/image";
+import { Calendar } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
 // Sample event data - replace with dynamic data source later
@@ -57,30 +56,20 @@ export default function EventsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {events.map((event) => (
-          <Card key={event.id} className="bg-card border-border shadow-sm flex flex-col">
-            <Image
-              src={event.image}
-              alt={event.imageAlt}
-              width={400}
-              height={250}
-              className="w-full object-cover h-48"
-               data-ai-hint={event.imageHint}
-            />
-            <CardHeader>
+          <Card key={event.id} className="bg-card border-border shadow-sm flex flex-col p-6">
+            <CardHeader className="p-0 pb-4">
               <CardTitle className="text-xl font-semibold text-card-foreground">{event.title}</CardTitle>
             </CardHeader>
-            <CardContent className="flex-grow flex flex-col justify-between">
+            <CardContent className="p-0 flex-grow flex flex-col justify-between">
               <div>
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
                   <Calendar className="mr-2 h-4 w-4" />
                   <span>{event.date} at {event.time}</span>
                 </div>
-                <CardDescription className="text-muted-foreground mb-4">
+                <CardDescription className="text-muted-foreground">
                   {event.description}
                 </CardDescription>
               </div>
-               {/* Optional: Add a 'Learn More' button if linking to specific event pages */}
-               {/* <Button variant="outline" size="sm">Learn More</Button> */}
             </CardContent>
           </Card>
         ))}
