@@ -201,7 +201,7 @@ export default function AboutPage(): JSX.Element {
        <Card className="mt-16 text-center bg-card border border-border shadow-sm p-8 rounded-lg">
          <CardContent>
            <Image
-            src="/images/ladder.jpg"
+            src="/images/qoute.jpg"
             alt="church event"
             width={350}
             height={350}

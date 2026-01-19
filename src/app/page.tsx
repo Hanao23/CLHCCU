@@ -70,7 +70,7 @@ export default function Home() {
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="md:w-1/2">
             <Image
-              src="/images/34anniversary.jpg"
+              src="/images/hero_event.jpg"
               alt="Events"
               width={600}
               height={500}
@@ -80,12 +80,10 @@ export default function Home() {
           </div>
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-semibold mb-4 text-secondary-foreground">Featured Upcoming Event</h2>
-            <h3 className="text-2xl font-medium mb-3 text-secondary-foreground">34th Anniversary &amp; Thanksgiving</h3>
+            <h3 className="text-2xl font-medium mb-3 text-secondary-foreground">90 Days of Faith</h3>
             <p className="text-lg text-muted-foreground mb-6">
-              From small beginnings to where we are today, one thing has remained constant and it is the faithfulness of God. For 34 years, He has proven that His plans are good and His promises never fail. This January 4, 2026, let’s gather at Bren Z. Guiao Convention Center, 9AM–5PM, for our 34th Anniversary &amp; Thanksgiving. Let’s lift our praises higher and give back all the glory to the One who made it all possible!
+              It starts today. 90 days of faith, prayer, and growth—together as one church. Let’s grow stronger and stronger in Christ.
             </p>
-            <p className="text-md text-muted-foreground mb-2"><strong>Date:</strong> January 4, 2026</p>
-            <p className="text-md text-muted-foreground mb-6"><strong>Time:</strong> 9:00 AM - 5:00 PM</p>
             <Button asChild variant="default">
               <Link href="/events">See All Events</Link>
             </Button>
