@@ -12,13 +12,13 @@ import {
   SheetTitle,
   SheetClose,
 } from '@/components/ui/sheet';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Church } from 'lucide-react';
 
 const navLinks = [
   { href: '/about', label: 'About' },
   { href: '/teams', label: 'Teams' },
   { href: '/events', label: 'Events' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/ministries', label: 'Ministries' },
 ];
 
 export function Header() {
