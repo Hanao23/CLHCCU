@@ -19,7 +19,7 @@ const events = [
     id: 2,
     title: "Midweek Bible Study",
     date: "Every Wednesday",
-    time: "7:00 PM - 8:30 PM",
+    time: "6:30 PM",
     location: "Fellowship Hall",
     description: "Dive deeper into God's Word with us during our interactive midweek study group.",
      image: "https://picsum.photos/400/250?grayscale&random=8",
