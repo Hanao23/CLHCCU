@@ -1,5 +1,5 @@
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
 export default function TeamsPage() {
@@ -15,7 +15,7 @@ export default function TeamsPage() {
         {/* Team Card Example */}
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/pastor1/400/250"
+            src="https://picsum.photos/seed/pastor1/800/500"
             alt="Ps. Jerome Tupe"
             width={400}
             height={250}
@@ -34,7 +34,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=2"
+            src="https://picsum.photos/seed/team2/800/500"
             alt="Ps. Lounel lugtu"
             width={400}
             height={250}
@@ -53,7 +53,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=3"
+            src="https://picsum.photos/seed/team3/800/500"
             alt="Ps. Gloria C. David"
             width={400}
             height={250}
@@ -72,7 +72,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=4"
+            src="https://picsum.photos/seed/team4/800/500"
             alt="Ps. Je Anne B. Santos"
             width={400}
             height={250}
@@ -91,7 +91,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=5"
+            src="https://picsum.photos/seed/team5/800/500"
             alt="Ps. Crisanto Tupe Jr."
             width={400}
             height={250}
@@ -110,7 +110,7 @@ export default function TeamsPage() {
 
          <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=6"
+            src="https://picsum.photos/seed/team6/800/500"
             alt="Ps. Andrew Vitug"
             width={400}
             height={250}
@@ -129,7 +129,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=7"
+            src="https://picsum.photos/seed/team7/800/500"
             alt="Ps. Michelle L. Serrano"
             width={400}
             height={250}
@@ -149,7 +149,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=8"
+            src="https://picsum.photos/seed/team8/800/500"
             alt="Ps. Resmilito Ramos"
             width={400}
             height={250}
@@ -168,7 +168,7 @@ export default function TeamsPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/400/250?grayscale&random=9"
+            src="https://picsum.photos/seed/team9/800/500"
             alt="Ps. Ericson Dela Cruz"
             width={400}
             height={250}
@@ -193,7 +193,7 @@ export default function TeamsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=10"
+                src="https://picsum.photos/seed/team10/800/500"
                 alt="Carl Jason Coronel"
                 width={400}
                 height={250}
@@ -207,7 +207,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=11"
+                src="https://picsum.photos/seed/team11/800/500"
                 alt="Dean Ayson"
                 width={400}
                 height={250}
@@ -221,7 +221,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=12"
+                src="https://picsum.photos/seed/team12/800/500"
                 alt="Bro. Gene Gonzales"
                 width={400}
                 height={250}
@@ -234,7 +234,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=13"
+                src="https://picsum.photos/seed/team13/800/500"
                 alt="Gregorio Cabrera II"
                 width={400}
                 height={250}
@@ -248,7 +248,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=14"
+                src="https://picsum.photos/seed/team14/800/500"
                 alt="Bro. James Erlano"
                 width={400}
                 height={250}
@@ -262,7 +262,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=15"
+                src="https://picsum.photos/seed/team15/800/500"
                 alt="Jim Enrico Balboa"
                 width={400}
                 height={250}
@@ -276,7 +276,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=16"
+                src="https://picsum.photos/seed/team16/800/500"
                 alt="Jethro Ocampo"
                 width={400}
                 height={250}
@@ -290,7 +290,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=17"
+                src="https://picsum.photos/seed/team17/800/500"
                 alt="Kyle Romero"
                 width={400}
                 height={250}
@@ -304,7 +304,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=18"
+                src="https://picsum.photos/seed/team18/800/500"
                 alt="Nomer Magpayo"
                 width={400}
                 height={250}
@@ -318,7 +318,7 @@ export default function TeamsPage() {
 
              <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=19"
+                src="https://picsum.photos/seed/team19/800/500"
                 alt="Ohlan Jefferson Fernando"
                 width={400}
                 height={250}
@@ -332,7 +332,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=20"
+                src="https://picsum.photos/seed/team20/800/500"
                 alt="Robinson Canlas"
                 width={400}
                 height={250}
@@ -346,7 +346,7 @@ export default function TeamsPage() {
 
             <Card className="bg-card border-border shadow-sm overflow-hidden">
             <Image
-                src="https://picsum.photos/400/250?grayscale&random=21"
+                src="https://picsum.photos/seed/team21/800/500"
                 alt="Robinson Canlas"
                 width={400}
                 height={250}
@@ -365,7 +365,7 @@ export default function TeamsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=22"
+                    src="https://picsum.photos/seed/team22/800/500"
                     alt="Woman 1"
                     width={400}
                     height={250}
@@ -378,7 +378,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=23"
+                    src="https://picsum.photos/seed/team23/800/500"
                     alt="Woman 2"
                     width={400}
                     height={250}
@@ -391,7 +391,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=24"
+                    src="https://picsum.photos/seed/team24/800/500"
                     alt="Woman 3"
                     width={400}
                     height={250}
@@ -404,7 +404,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=25"
+                    src="https://picsum.photos/seed/team25/800/500"
                     alt="Woman 4"
                     width={400}
                     height={250}
@@ -417,7 +417,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=26"
+                    src="https://picsum.photos/seed/team26/800/500"
                     alt="Woman 5"
                     width={400}
                     height={250}
@@ -430,7 +430,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=27"
+                    src="https://picsum.photos/seed/team27/800/500"
                     alt="Woman 6"
                     width={400}
                     height={250}
@@ -443,7 +443,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=28"
+                    src="https://picsum.photos/seed/team28/800/500"
                     alt="Woman 7"
                     width={400}
                     height={250}
@@ -456,7 +456,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=29"
+                    src="https://picsum.photos/seed/team29/800/500"
                     alt="Woman 8"
                     width={400}
                     height={250}
@@ -469,7 +469,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=30"
+                    src="https://picsum.photos/seed/team30/800/500"
                     alt="Woman 9"
                     width={400}
                     height={250}
@@ -482,7 +482,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=31"
+                    src="https://picsum.photos/seed/team31/800/500"
                     alt="Woman 10"
                     width={400}
                     height={250}
@@ -495,7 +495,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=32"
+                    src="https://picsum.photos/seed/team32/800/500"
                     alt="Woman 11"
                     width={400}
                     height={250}
@@ -508,7 +508,7 @@ export default function TeamsPage() {
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
                 <Image
-                    src="https://picsum.photos/400/250?grayscale&random=33"
+                    src="https://picsum.photos/seed/team33/800/500"
                     alt="Woman 12"
                     width={400}
                     height={250}

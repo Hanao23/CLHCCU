@@ -1,6 +1,6 @@
 
 import { Calendar, MapPin } from 'lucide-react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
 // Sample event data - replace with dynamic data source later
@@ -11,7 +11,7 @@ const events = [
     date: "Every Sunday",
     time: "10:00 AM - 11:30 AM",
     description: "Join us for our weekly gathering featuring worship, teaching, and fellowship.",
-    image: "https://picsum.photos/seed/worship-leader/400/250",
+    image: "/images/sunday_worship.jpg",
     imageAlt: "Worship service",
     imageHint: "pastor singing worship"
   },
@@ -21,7 +21,7 @@ const events = [
     date: "Every Wednesday",
     time: "6:30 PM",
     description: "Dive deeper into God's Word with us during our interactive midweek study group.",
-     image: "https://picsum.photos/seed/bible-study/400/250",
+     image: "https://picsum.photos/seed/bible-study/800/500",
     imageAlt: "Bible study group",
      imageHint: "people studying bible books"
   },
@@ -31,7 +31,7 @@ const events = [
     date: "July 20th, 2024",
     time: "12:00 PM - 4:00 PM",
     description: "A fun-filled day of food, games, and fellowship for the whole church family and community.",
-    image: "https://picsum.photos/seed/picnic/400/250",
+    image: "https://picsum.photos/seed/picnic/800/500",
     imageAlt: "Community picnic",
      imageHint: "park picnic people food"
   },
@@ -41,7 +41,7 @@ const events = [
     date: "July 26th, 2024",
     time: "6:30 PM - 9:00 PM",
     description: "An exciting night of games, snacks, and fun for all teenagers (Grades 7-12).",
-     image: "https://picsum.photos/seed/game-night/400/250",
+     image: "https://picsum.photos/seed/game-night/800/500",
     imageAlt: "Youth game night",
      imageHint: "teenagers playing games board games"
   },

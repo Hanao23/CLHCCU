@@ -136,16 +136,14 @@ export default function AboutPage(): JSX.Element {
                height={120}
                 className="rounded-full mx-auto mb-4 shadow-md"
              />
-             <div> 
-                <CardHeader className="p-0"> 
-                  <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ruth Ocampo</CardTitle>
-                  <CardDescription className="text-md text-primary">Pastor Wife</CardDescription>
-                </CardHeader>
-                <CardContent className="pt-4"> 
-                  <p className="text-sm text-muted-foreground">
-                  BS Economics UP DilimanMasters in Business Management UP San FernandoInternational Marketing in EEC by CDG GermanyJohn Maxwell Leadership Training                  </p>
-                </CardContent>
-             </div>
+            <CardHeader className="p-0">
+              <CardTitle className="text-xl font-semibold mb-1 text-card-foreground">Ruth Ocampo</CardTitle>
+              <CardDescription className="text-md text-primary">Pastor Wife</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-4">
+              <p className="text-sm text-muted-foreground">
+              BS Economics UP DilimanMasters in Business Management UP San FernandoInternational Marketing in EEC by CDG GermanyJohn Maxwell Leadership Training              </p>
+            </CardContent>
           </Card>
          </div>
        </section>

@@ -1,5 +1,5 @@
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Heart, Users, Youtube } from 'lucide-react';
 
@@ -15,7 +15,7 @@ export default function MinistriesPage() {
         {/* Ministry Card Example */}
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/ministry1/400/250"
+            src="https://picsum.photos/seed/ministry1/800/500"
             alt="Worship Ministry"
             width={400}
             height={250}
@@ -34,7 +34,7 @@ export default function MinistriesPage() {
 
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/ministry2/400/250"
+            src="https://picsum.photos/seed/ministry2/800/500"
             alt="Youth Ministry"
             width={400}
             height={250}
@@ -53,7 +53,7 @@ export default function MinistriesPage() {
         
         <Card className="bg-card border-border shadow-sm overflow-hidden">
           <Image
-            src="https://picsum.photos/seed/ministry3/400/250"
+            src="https://picsum.photos/seed/ministry3/800/500"
             alt="Media Ministry"
             width={400}
             height={250}
