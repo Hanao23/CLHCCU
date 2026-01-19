@@ -19,6 +19,7 @@ const navLinks = [
   { href: '/teams', label: 'Teams' },
   { href: '/events', label: 'Events' },
   { href: '/ministries', label: 'Ministries' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export function Header() {
