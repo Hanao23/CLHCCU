@@ -205,7 +205,7 @@ export default function AboutPage(): JSX.Element {
             alt="church event"
             width={350}
             height={350}
-            className="rounded-full shadow-md object-cover mx-auto"
+            className="shadow-md object-cover mx-auto"
             data-ai-hint="church event diverse people"/>
          </CardContent>
       </Card>
