@@ -1,5 +1,4 @@
 
-import { Calendar } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 
 // Sample event data - replace with dynamic data source later
@@ -51,7 +50,6 @@ export default function EventsPage() {
             <CardContent className="p-0 flex-grow flex flex-col justify-between">
               <div>
                 <div className="flex items-center text-sm text-muted-foreground mb-2">
-                  <Calendar className="mr-2 h-4 w-4" />
                   <span>{event.date}{event.time ? ` at ${event.time}` : ''}</span>
                 </div>
                 <CardDescription className="text-muted-foreground">
