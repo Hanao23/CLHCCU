@@ -373,7 +373,7 @@ export default function TeamsPage() {
                     data-ai-hint="headshot portrait woman"
                 />
                 <CardHeader>
-                    <CardTitle className="text-xl font-semibold text-card-foreground">Woman 1</CardTitle>
+                    <CardTitle className="text-xl font-semibold text-card-foreground">Russel</CardTitle>
                 </CardHeader>
             </Card>
             <Card className="bg-card border-border shadow-sm overflow-hidden">
