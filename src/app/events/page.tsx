@@ -38,9 +38,8 @@ const events = [
    {
     id: 4,
     title: "90 Days Challenge",
-    date: "July 26th, 2024",
-    time: "6:30 PM - 9:00 PM",
-    description: "An exciting night of games, snacks, and fun for all teenagers (Grades 7-12).",
+    date: "January 19 - April 18",
+    description: "90 days of choosing God daily. 90 days of prayer, the Word, discipline, and growth. 90 days of becoming stronger in faith and in purpose.",
   },
 ];
 
@@ -54,7 +53,7 @@ export default function EventsPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {events.map((event) => (
-          <Card key={event.id} className="bg-card border-border shadow-sm flex flex-col p-6">
+          <Card key={event.id} className="bg-card border-border shadow-sm flex flex-col p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <CardHeader className="p-0 pb-4">
               <CardTitle className="text-xl font-semibold text-card-foreground">{event.title}</CardTitle>
             </CardHeader>
